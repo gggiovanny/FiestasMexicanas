@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmClientes));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.clieCodigo = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -68,8 +67,11 @@
             this.lblTitulo.TabIndex = 30;
             this.lblTitulo.Text = "Clientes";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox4
+            // 
             this.groupBox4.Controls.Add(this.label1);
-            this.groupBox4.Controls.Add(this.textBox8);
+            this.groupBox4.Controls.Add(this.clieCodigo);
             this.groupBox4.Controls.Add(this.button1);
             this.groupBox4.Controls.Add(this.textBox7);
             this.groupBox4.Controls.Add(this.label15);
@@ -107,13 +109,13 @@
             this.label1.TabIndex = 34;
             this.label1.Text = "Codigo";
             // 
-            // textBox8
+            // clieCodigo
             // 
-            this.textBox8.Location = new System.Drawing.Point(78, 19);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(117, 20);
-            this.textBox8.TabIndex = 33;
-            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
+            this.clieCodigo.Location = new System.Drawing.Point(78, 19);
+            this.clieCodigo.Name = "clieCodigo";
+            this.clieCodigo.Size = new System.Drawing.Size(117, 20);
+            this.clieCodigo.TabIndex = 33;
+            this.clieCodigo.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // button1
             // 
@@ -330,6 +332,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox clieCodigo;
     }
 }
