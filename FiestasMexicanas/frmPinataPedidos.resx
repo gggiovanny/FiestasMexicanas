@@ -118,6 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="c1FlexGrid1.ColumnInfo" xml:space="preserve">
-    <value>5,0,0,0,0,95,Columns:0{Width:41;Caption:"FECHA";Style:"DataType:System.UInt32;TextAlign:GeneralCenter;";}	1{Width:117;Caption:"PIÑATAS VENDIDAS";}	2{Width:112;Caption:"GANANCIA BRUTA";}	3{Width:38;Caption:"I.V.A.";}	4{Width:100;Caption:"GANANCIA NETA";}	</value>
+    <value>10,0,0,0,0,95,Columns:0{Width:57;Caption:"Codigo";}	1{Width:46;Caption:"Tipo";}	2{Width:54;Caption:"Tamaño";}	3{Width:57;Caption:"Detalle";}	4{Width:69;Caption:"Hay molde";}	5{Width:166;Caption:"Descripcion";}	6{Width:64;Caption:"Cliente";}	7{Width:64;Caption:"Cantidad";}	8{Width:71;Caption:"Importe venta";}	9{Width:60;Caption:"Entregado";Style:"DataType:System.Boolean;TextAlign:LeftCenter;ImageAlign:CenterCenter;";}	</value>
   </data>
 </root>

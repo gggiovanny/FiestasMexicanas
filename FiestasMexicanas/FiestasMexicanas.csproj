@@ -33,8 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="C1.Win.C1FlexGrid.2, Version=2.0.20181.296, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.4, Version=4.0.20181.296, Culture=neutral, PublicKeyToken=944ae1ea0e47ca04" />
+    <Reference Include="C1.Win.C1Command.4, Version=4.0.20181.296, Culture=neutral, PublicKeyToken=e808566f358766d8" />
+    <Reference Include="C1.Win.C1Editor.4, Version=4.0.20181.296, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1FlexGrid.4, Version=4.0.20181.296, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Input.4, Version=4.0.20181.296, Culture=neutral, PublicKeyToken=7e7ff60f0c214f9a, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing.Design" />
@@ -49,35 +54,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmControlEmpleadosSueldo.cs">
+    <Compile Include="FiestasMexicanasPrueba.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FiestasMexicanasPrueba.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmPinataPedidos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmControlEmpleadosSueldo.Designer.cs">
-      <DependentUpon>frmControlEmpleadosSueldo.cs</DependentUpon>
+    <Compile Include="frmPinataPedidos.Designer.cs">
+      <DependentUpon>frmPinataPedidos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmControlProveedores.cs">
+    <Compile Include="frmArtesanoSueldo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmControlProveedores.Designer.cs">
-      <DependentUpon>frmControlProveedores.cs</DependentUpon>
+    <Compile Include="frmArtesanoSueldo.Designer.cs">
+      <DependentUpon>frmArtesanoSueldo.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmControlClientes.cs">
+    <Compile Include="frmProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmControlClientes.Designer.cs">
-      <DependentUpon>frmControlClientes.cs</DependentUpon>
+    <Compile Include="frmProveedores.Designer.cs">
+      <DependentUpon>frmProveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmControlEmpleadosTrabajo.cs">
+    <Compile Include="frmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmControlEmpleadosTrabajo.Designer.cs">
-      <DependentUpon>frmControlEmpleadosTrabajo.cs</DependentUpon>
+    <Compile Include="frmClientes.Designer.cs">
+      <DependentUpon>frmClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCotizacion.cs">
+    <Compile Include="frmArtesanoAsignacionTrabajo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCotizacion.Designer.cs">
-      <DependentUpon>frmCotizacion.cs</DependentUpon>
+    <Compile Include="frmArtesanoAsignacionTrabajo.Designer.cs">
+      <DependentUpon>frmArtesanoAsignacionTrabajo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPinataCotizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPinataCotizacion.Designer.cs">
+      <DependentUpon>frmPinataCotizacion.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGestorGanancias.cs">
       <SubType>Form</SubType>
@@ -85,43 +101,70 @@
     <Compile Include="frmGestorGanancias.Designer.cs">
       <DependentUpon>frmGestorGanancias.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmVisorTrabajo.cs">
+    <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmVisorTrabajo.Designer.cs">
-      <DependentUpon>frmVisorTrabajo.cs</DependentUpon>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu.cs">
+    <Compile Include="frmPinataPreciosCotizaciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <Compile Include="frmPinataPreciosCotizaciones.Designer.cs">
+      <DependentUpon>frmPinataPreciosCotizaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmArtesanosVisorTrabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArtesanosVisorTrabajo.Designer.cs">
+      <DependentUpon>frmArtesanosVisorTrabajo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmControlEmpleadosSueldo.resx">
-      <DependentUpon>frmControlEmpleadosSueldo.cs</DependentUpon>
+    <Compile Include="Pruebas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pruebas.Designer.cs">
+      <DependentUpon>Pruebas.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmPinataPedidos.resx">
+      <DependentUpon>frmPinataPedidos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmControlEmpleadosTrabajo.resx">
-      <DependentUpon>frmControlEmpleadosTrabajo.cs</DependentUpon>
+    <EmbeddedResource Include="frmArtesanoSueldo.resx">
+      <DependentUpon>frmArtesanoSueldo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmControlProveedores.resx">
-      <DependentUpon>frmControlProveedores.cs</DependentUpon>
+    <EmbeddedResource Include="frmArtesanoAsignacionTrabajo.resx">
+      <DependentUpon>frmArtesanoAsignacionTrabajo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmControlClientes.resx">
-      <DependentUpon>frmControlClientes.cs</DependentUpon>
+    <EmbeddedResource Include="frmProveedores.resx">
+      <DependentUpon>frmProveedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCotizacion.resx">
-      <DependentUpon>frmCotizacion.cs</DependentUpon>
+    <EmbeddedResource Include="frmClientes.resx">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPinataCotizacion.resx">
+      <DependentUpon>frmPinataCotizacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGestorGanancias.resx">
       <DependentUpon>frmGestorGanancias.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmVisorTrabajo.resx">
-      <DependentUpon>frmVisorTrabajo.cs</DependentUpon>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <EmbeddedResource Include="frmPinataPreciosCotizaciones.resx">
+      <DependentUpon>frmPinataPreciosCotizaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmArtesanosVisorTrabajo.resx">
+      <DependentUpon>frmArtesanosVisorTrabajo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -133,6 +176,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Pruebas.resx">
+      <DependentUpon>Pruebas.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="FiestasMexicanasPrueba.xsc">
+      <DependentUpon>FiestasMexicanasPrueba.xsd</DependentUpon>
+    </None>
+    <None Include="FiestasMexicanasPrueba.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FiestasMexicanasPrueba.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FiestasMexicanasPrueba.xss">
+      <DependentUpon>FiestasMexicanasPrueba.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

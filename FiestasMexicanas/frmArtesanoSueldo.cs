@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FiestasMexicanas
 {
-    public partial class frmControlProveedores : Form
+    public partial class frmArtesanoSueldo : Form
     {
-        public frmControlProveedores()
+        public frmArtesanoSueldo()
         {
             InitializeComponent();
         }

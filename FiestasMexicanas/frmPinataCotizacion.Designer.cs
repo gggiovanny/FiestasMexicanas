@@ -1,6 +1,6 @@
 ﻿namespace FiestasMexicanas
 {
-    partial class frmCotizacion
+    partial class frmPinataCotizacion
     {
         /// <summary>
         /// Required designer variable.
@@ -37,14 +37,9 @@
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radioButton12 = new System.Windows.Forms.RadioButton();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.radioButton11 = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -72,16 +67,19 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.gpoTamaño.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -93,8 +91,9 @@
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(523, 44);
             this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "Cotización de piñatas";
+            this.lblTitulo.Text = "Cotización";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
             // radioButton1
             // 
@@ -115,7 +114,7 @@
             this.gpoTamaño.Controls.Add(this.radioButton2);
             this.gpoTamaño.Controls.Add(this.radioButton1);
             this.gpoTamaño.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpoTamaño.Location = new System.Drawing.Point(15, 56);
+            this.gpoTamaño.Location = new System.Drawing.Point(15, 115);
             this.gpoTamaño.Name = "gpoTamaño";
             this.gpoTamaño.Size = new System.Drawing.Size(345, 55);
             this.gpoTamaño.TabIndex = 3;
@@ -153,7 +152,7 @@
             this.groupBox1.Controls.Add(this.radioButton5);
             this.groupBox1.Controls.Add(this.radioButton6);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(15, 117);
+            this.groupBox1.Location = new System.Drawing.Point(15, 176);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(345, 55);
             this.groupBox1.TabIndex = 5;
@@ -188,121 +187,49 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioButton8);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.numericUpDown1);
             this.groupBox2.Controls.Add(this.radioButton4);
-            this.groupBox2.Controls.Add(this.radioButton7);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(15, 178);
+            this.groupBox2.Location = new System.Drawing.Point(15, 237);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(345, 55);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Molde";
             // 
-            // radioButton8
+            // label6
             // 
-            this.radioButton8.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton8.Location = new System.Drawing.Point(235, 21);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(100, 19);
-            this.radioButton8.TabIndex = 4;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "Diseño nuevo";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(199, 29);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(71, 13);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Metros aprox.";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Enabled = false;
+            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(272, 25);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(67, 22);
+            this.numericUpDown1.TabIndex = 4;
             // 
             // radioButton4
             // 
             this.radioButton4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.radioButton4.AutoSize = true;
             this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton4.Location = new System.Drawing.Point(120, 21);
+            this.radioButton4.Location = new System.Drawing.Point(10, 25);
             this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(100, 19);
+            this.radioButton4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.radioButton4.Size = new System.Drawing.Size(177, 19);
             this.radioButton4.TabIndex = 3;
             this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Molde parcial";
+            this.radioButton4.Text = "Lleva estructura de alambre";
             this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // radioButton7
-            // 
-            this.radioButton7.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton7.Location = new System.Drawing.Point(6, 21);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(96, 19);
-            this.radioButton7.TabIndex = 2;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "Existe molde";
-            this.radioButton7.UseVisualStyleBackColor = true;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.radioButton12);
-            this.groupBox3.Controls.Add(this.radioButton9);
-            this.groupBox3.Controls.Add(this.radioButton10);
-            this.groupBox3.Controls.Add(this.radioButton11);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(15, 239);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(345, 55);
-            this.groupBox3.TabIndex = 7;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Tipo";
-            // 
-            // radioButton12
-            // 
-            this.radioButton12.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.radioButton12.AutoSize = true;
-            this.radioButton12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton12.Location = new System.Drawing.Point(272, 21);
-            this.radioButton12.Name = "radioButton12";
-            this.radioButton12.Size = new System.Drawing.Size(48, 19);
-            this.radioButton12.TabIndex = 5;
-            this.radioButton12.TabStop = true;
-            this.radioButton12.Text = "Otro";
-            this.radioButton12.UseVisualStyleBackColor = true;
-            // 
-            // radioButton9
-            // 
-            this.radioButton9.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton9.Location = new System.Drawing.Point(198, 21);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(60, 19);
-            this.radioButton9.TabIndex = 4;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "Figura";
-            this.radioButton9.UseVisualStyleBackColor = true;
-            // 
-            // radioButton10
-            // 
-            this.radioButton10.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton10.Location = new System.Drawing.Point(116, 21);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(63, 19);
-            this.radioButton10.TabIndex = 3;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "Animal";
-            this.radioButton10.UseVisualStyleBackColor = true;
-            // 
-            // radioButton11
-            // 
-            this.radioButton11.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.radioButton11.AutoSize = true;
-            this.radioButton11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton11.Location = new System.Drawing.Point(6, 21);
-            this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(90, 19);
-            this.radioButton11.TabIndex = 2;
-            this.radioButton11.TabStop = true;
-            this.radioButton11.Text = "Humanoide";
-            this.radioButton11.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -319,9 +246,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(193, 304);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 16);
+            this.label1.Size = new System.Drawing.Size(102, 16);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Costo:";
+            this.label1.Text = "Precio de venta";
             // 
             // label2
             // 
@@ -329,9 +256,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(191, 320);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(169, 29);
+            this.label2.Size = new System.Drawing.Size(180, 29);
             this.label2.TabIndex = 11;
-            this.label2.Text = "$ 0.00 M.X.N.";
+            this.label2.Text = "$ 0.00 M.X.N*.";
             // 
             // checkBox1
             // 
@@ -557,26 +484,6 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "Apellidos";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(237, 348);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 13);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Anticipo:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(280, 349);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 13);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "$0.00 M.X.N.";
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -603,14 +510,55 @@
             this.button2.Text = "Guardar como pedido";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // frmCotizacion
+            // groupBox3
+            // 
+            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.groupBox3.Controls.Add(this.comboBox5);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(15, 54);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(345, 55);
+            this.groupBox3.TabIndex = 7;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Tipo";
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(10, 22);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(328, 24);
+            this.comboBox5.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(9, 614);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(344, 13);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "* El precio final depende del vendedor y puede o no coincidir con éste. ";
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoCheck = false;
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(378, 265);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(85, 17);
+            this.checkBox2.TabIndex = 33;
+            this.checkBox2.Text = "Existe molde";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // frmPinataCotizacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(547, 631);
+            this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox4);
@@ -623,18 +571,19 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gpoTamaño);
             this.Controls.Add(this.lblTitulo);
-            this.Name = "frmCotizacion";
+            this.Name = "frmPinataCotizacion";
             this.Text = "Cotizacion";
+            this.Load += new System.EventHandler(this.frmCotizacion_Load);
             this.gpoTamaño.ResumeLayout(false);
             this.gpoTamaño.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -651,14 +600,7 @@
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.RadioButton radioButton6;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton8;
         private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.RadioButton radioButton10;
-        private System.Windows.Forms.RadioButton radioButton11;
-        private System.Windows.Forms.RadioButton radioButton12;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -668,8 +610,6 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label7;
@@ -691,5 +631,11 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }
