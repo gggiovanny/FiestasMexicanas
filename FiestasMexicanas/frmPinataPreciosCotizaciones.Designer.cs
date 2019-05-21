@@ -30,9 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPinataPreciosCotizaciones));
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.c1FlexGrid1 = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.c1FlexGrid1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -46,19 +44,6 @@
             this.lblTitulo.TabIndex = 1;
             this.lblTitulo.Text = "Administración de precios";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // c1FlexGrid1
-            // 
-            this.c1FlexGrid1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.c1FlexGrid1.ColumnInfo = resources.GetString("c1FlexGrid1.ColumnInfo");
-            this.c1FlexGrid1.Location = new System.Drawing.Point(12, 111);
-            this.c1FlexGrid1.Name = "c1FlexGrid1";
-            this.c1FlexGrid1.Rows.Count = 17;
-            this.c1FlexGrid1.Rows.DefaultSize = 19;
-            this.c1FlexGrid1.Size = new System.Drawing.Size(608, 327);
-            this.c1FlexGrid1.TabIndex = 4;
             // 
             // button1
             // 
@@ -75,11 +60,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(632, 450);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.c1FlexGrid1);
             this.Controls.Add(this.lblTitulo);
             this.Name = "frmPinataPreciosCotizaciones";
             this.Text = "Administración de precios";
-            ((System.ComponentModel.ISupportInitialize)(this.c1FlexGrid1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -87,7 +70,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblTitulo;
-        private C1.Win.C1FlexGrid.C1FlexGrid c1FlexGrid1;
         private System.Windows.Forms.Button button1;
     }
 }

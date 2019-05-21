@@ -30,15 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmArtesanoAsignacionTrabajo));
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.c1FlexGrid1 = new C1.Win.C1FlexGrid.C1FlexGrid();
-            this.c1FlexGrid2 = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.c1FlexGrid1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c1FlexGrid2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -52,27 +48,6 @@
             this.lblTitulo.TabIndex = 1;
             this.lblTitulo.Text = "Asignacion de carga de trabajo";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // c1FlexGrid1
-            // 
-            this.c1FlexGrid1.ColumnInfo = resources.GetString("c1FlexGrid1.ColumnInfo");
-            this.c1FlexGrid1.Location = new System.Drawing.Point(12, 126);
-            this.c1FlexGrid1.Name = "c1FlexGrid1";
-            this.c1FlexGrid1.Rows.Count = 16;
-            this.c1FlexGrid1.Rows.DefaultSize = 19;
-            this.c1FlexGrid1.Size = new System.Drawing.Size(453, 309);
-            this.c1FlexGrid1.TabIndex = 2;
-            // 
-            // c1FlexGrid2
-            // 
-            this.c1FlexGrid2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.c1FlexGrid2.ColumnInfo = resources.GetString("c1FlexGrid2.ColumnInfo");
-            this.c1FlexGrid2.Location = new System.Drawing.Point(502, 131);
-            this.c1FlexGrid2.Name = "c1FlexGrid2";
-            this.c1FlexGrid2.Rows.Count = 16;
-            this.c1FlexGrid2.Rows.DefaultSize = 19;
-            this.c1FlexGrid2.Size = new System.Drawing.Size(509, 309);
-            this.c1FlexGrid2.TabIndex = 3;
             // 
             // button1
             // 
@@ -136,13 +111,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.c1FlexGrid2);
-            this.Controls.Add(this.c1FlexGrid1);
             this.Controls.Add(this.lblTitulo);
             this.Name = "frmArtesanoAsignacionTrabajo";
             this.Text = "Asignacion de carga de trabajo";
-            ((System.ComponentModel.ISupportInitialize)(this.c1FlexGrid1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c1FlexGrid2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -150,8 +121,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblTitulo;
-        private C1.Win.C1FlexGrid.C1FlexGrid c1FlexGrid1;
-        private C1.Win.C1FlexGrid.C1FlexGrid c1FlexGrid2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;

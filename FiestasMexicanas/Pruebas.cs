@@ -17,19 +17,11 @@ namespace FiestasMexicanas
             InitializeComponent();
         }
 
-        private void cATALOGO_ESTADOSBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.cATALOGO_ESTADOSBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.fiestasMexicanasPrueba);
-
-        }
+       
 
         private void Pruebas_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'fiestasMexicanasPrueba.CATALOGO_ESTADOS' table. You can move, or remove it, as needed.
-            this.cATALOGO_ESTADOSTableAdapter.Fill(this.fiestasMexicanasPrueba.CATALOGO_ESTADOS);
-
+           
         }
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
