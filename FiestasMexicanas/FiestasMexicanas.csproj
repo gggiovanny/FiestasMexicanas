@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>FiestasMexicanas</RootNamespace>
     <AssemblyName>FiestasMexicanas</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -123,6 +124,9 @@
     <Compile Include="Pruebas.Designer.cs">
       <DependentUpon>Pruebas.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmArtesanosVisorTrabajo.resx">
+      <DependentUpon>frmArtesanosVisorTrabajo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPinataPedidos.resx">
       <DependentUpon>frmPinataPedidos.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,9 +154,6 @@
     <EmbeddedResource Include="frmPinataPreciosCotizaciones.resx">
       <DependentUpon>frmPinataPreciosCotizaciones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmArtesanosVisorTrabajo.resx">
-      <DependentUpon>frmArtesanosVisorTrabajo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +166,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Pruebas.resx">
       <DependentUpon>Pruebas.cs</DependentUpon>
