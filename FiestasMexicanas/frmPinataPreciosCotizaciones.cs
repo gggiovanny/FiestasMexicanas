@@ -16,5 +16,12 @@ namespace FiestasMexicanas
         {
             InitializeComponent();
         }
+
+        private void FrmPinataPreciosCotizaciones_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'fiestasMexicanasDataSet.v_PRECIO_PINATA' table. You can move, or remove it, as needed.
+            this.v_PRECIO_PINATATableAdapter.Fill(this.fiestasMexicanasDataSet.v_PRECIO_PINATA);
+
+        }
     }
 }

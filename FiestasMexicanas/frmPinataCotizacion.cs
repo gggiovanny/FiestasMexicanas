@@ -29,6 +29,8 @@ namespace FiestasMexicanas
 
         private void frmCotizacion_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fiestasMexicanasDataSet.CATALOGO_TIPO_PINATA' table. You can move, or remove it, as needed.
+            this.cATALOGO_TIPO_PINATATableAdapter.Fill(this.fiestasMexicanasDataSet.CATALOGO_TIPO_PINATA);
 
         }
     }

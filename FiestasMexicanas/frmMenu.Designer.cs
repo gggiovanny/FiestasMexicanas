@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.btn_asignacionTrabajo = new System.Windows.Forms.Button();
             this.btn_artesanos = new System.Windows.Forms.Button();
             this.btn_visorCargaTrabajo = new System.Windows.Forms.Button();
@@ -48,6 +49,7 @@
             this.btn_asignacionTrabajo.TabIndex = 0;
             this.btn_asignacionTrabajo.Text = "Asignacion de carga de trabajo";
             this.btn_asignacionTrabajo.UseVisualStyleBackColor = true;
+            this.btn_asignacionTrabajo.Click += new System.EventHandler(this.Btn_asignacionTrabajo_Click);
             // 
             // btn_artesanos
             // 
@@ -57,6 +59,7 @@
             this.btn_artesanos.TabIndex = 1;
             this.btn_artesanos.Text = "Artesanos";
             this.btn_artesanos.UseVisualStyleBackColor = true;
+            this.btn_artesanos.Click += new System.EventHandler(this.Btn_artesanos_Click);
             // 
             // btn_visorCargaTrabajo
             // 
@@ -66,6 +69,7 @@
             this.btn_visorCargaTrabajo.TabIndex = 2;
             this.btn_visorCargaTrabajo.Text = "Visor de carga de trabajo";
             this.btn_visorCargaTrabajo.UseVisualStyleBackColor = true;
+            this.btn_visorCargaTrabajo.Click += new System.EventHandler(this.Btn_visorCargaTrabajo_Click);
             // 
             // btn_cotizacion
             // 
@@ -75,6 +79,7 @@
             this.btn_cotizacion.TabIndex = 5;
             this.btn_cotizacion.Text = "Cotización";
             this.btn_cotizacion.UseVisualStyleBackColor = true;
+            this.btn_cotizacion.Click += new System.EventHandler(this.Btn_cotizacion_Click);
             // 
             // btn_gestorGanancias
             // 
@@ -84,6 +89,7 @@
             this.btn_gestorGanancias.TabIndex = 4;
             this.btn_gestorGanancias.Text = "Gestor de ganancias";
             this.btn_gestorGanancias.UseVisualStyleBackColor = true;
+            this.btn_gestorGanancias.Click += new System.EventHandler(this.Btn_gestorGanancias_Click);
             // 
             // btn_clientes
             // 
@@ -93,6 +99,7 @@
             this.btn_clientes.TabIndex = 3;
             this.btn_clientes.Text = "Clientes";
             this.btn_clientes.UseVisualStyleBackColor = true;
+            this.btn_clientes.Click += new System.EventHandler(this.Btn_clientes_Click);
             // 
             // btn_proveedores
             // 
@@ -102,6 +109,7 @@
             this.btn_proveedores.TabIndex = 8;
             this.btn_proveedores.Text = "Proveedores";
             this.btn_proveedores.UseVisualStyleBackColor = true;
+            this.btn_proveedores.Click += new System.EventHandler(this.Btn_proveedores_Click);
             // 
             // btn_adminPrecios
             // 
@@ -111,6 +119,7 @@
             this.btn_adminPrecios.TabIndex = 7;
             this.btn_adminPrecios.Text = "Administración de precios";
             this.btn_adminPrecios.UseVisualStyleBackColor = true;
+            this.btn_adminPrecios.Click += new System.EventHandler(this.Btn_adminPrecios_Click);
             // 
             // btn_catalogoCotizacionesPedidos
             // 
@@ -120,6 +129,7 @@
             this.btn_catalogoCotizacionesPedidos.TabIndex = 6;
             this.btn_catalogoCotizacionesPedidos.Text = "Catálogo de cotizaciones y pedidos";
             this.btn_catalogoCotizacionesPedidos.UseVisualStyleBackColor = true;
+            this.btn_catalogoCotizacionesPedidos.Click += new System.EventHandler(this.Btn_catalogoCotizacionesPedidos_Click);
             // 
             // lblTitulo
             // 
@@ -148,6 +158,7 @@
             this.Controls.Add(this.btn_visorCargaTrabajo);
             this.Controls.Add(this.btn_artesanos);
             this.Controls.Add(this.btn_asignacionTrabajo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMenu";
             this.Text = "Menú";
             this.ResumeLayout(false);

@@ -10,5 +10,13 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=localhost\SQLEXPRESS;Initial Catalog=FiestasMexicanas;Persist Security Info=True;User ID=SA;Password=ESMINOMBRE</Value>
     </Setting>
+    <Setting Name="FiestasMexicanasConnectionStringBueno" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=GGONZALEZ-PC;Initial Catalog=FiestasMexicanas;Persist Security Info=True;User ID=SA;Password=ESMINOMBRE&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=GGONZALEZ-PC;Initial Catalog=FiestasMexicanas;Persist Security Info=True;User ID=SA;Password=ESMINOMBRE</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -16,7 +16,7 @@ namespace FiestasMexicanas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPinataCotizacion());
+            Application.Run(new frmMenu());
         }
     }
 }

@@ -16,5 +16,12 @@ namespace FiestasMexicanas
         {
             InitializeComponent();
         }
+
+        private void FrmGestorGanancias_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'fiestasMexicanasDataSet.v_GESTOR_GANANCIAS' table. You can move, or remove it, as needed.
+            this.v_GESTOR_GANANCIASTableAdapter.Fill(this.fiestasMexicanasDataSet.v_GESTOR_GANANCIAS);
+
+        }
     }
 }

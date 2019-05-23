@@ -17,15 +17,9 @@ namespace FiestasMexicanas
             InitializeComponent();
         }
 
-       
-
         private void Pruebas_Load(object sender, EventArgs e)
         {
-           
-        }
-
-        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
-        {
+            
 
         }
     }

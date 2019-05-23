@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,7 +54,25 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_nombres = new System.Windows.Forms.TextBox();
+            this.fiestasMexicanasDataSet = new FiestasMexicanas.FiestasMexicanasDataSet();
+            this.v_PROVEEDORESBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.v_PROVEEDORESTableAdapter = new FiestasMexicanas.FiestasMexicanasDataSetTableAdapters.v_PROVEEDORESTableAdapter();
+            this.tableAdapterManager = new FiestasMexicanas.FiestasMexicanasDataSetTableAdapters.TableAdapterManager();
+            this.v_PROVEEDORESDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fiestasMexicanasDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.v_PROVEEDORESBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.v_PROVEEDORESDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -63,7 +82,7 @@
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(6, 9);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(902, 44);
+            this.lblTitulo.Size = new System.Drawing.Size(910, 44);
             this.lblTitulo.TabIndex = 30;
             this.lblTitulo.Text = "Proveedores";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -94,7 +113,7 @@
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.txt_nombres);
-            this.groupBox4.Location = new System.Drawing.Point(14, 56);
+            this.groupBox4.Location = new System.Drawing.Point(18, 56);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(892, 224);
             this.groupBox4.TabIndex = 33;
@@ -291,17 +310,165 @@
             this.txt_nombres.Size = new System.Drawing.Size(117, 20);
             this.txt_nombres.TabIndex = 13;
             // 
+            // fiestasMexicanasDataSet
+            // 
+            this.fiestasMexicanasDataSet.DataSetName = "FiestasMexicanasDataSet";
+            this.fiestasMexicanasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // v_PROVEEDORESBindingSource
+            // 
+            this.v_PROVEEDORESBindingSource.DataMember = "v_PROVEEDORES";
+            this.v_PROVEEDORESBindingSource.DataSource = this.fiestasMexicanasDataSet;
+            // 
+            // v_PROVEEDORESTableAdapter
+            // 
+            this.v_PROVEEDORESTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.ARTESANOS_PEDIDOSTableAdapter = null;
+            this.tableAdapterManager.ARTESANOSTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CATALOGO_CIUDADESTableAdapter = null;
+            this.tableAdapterManager.CATALOGO_CLIENTESTableAdapter = null;
+            this.tableAdapterManager.CATALOGO_EMPLEADOS_PUESTOSTableAdapter = null;
+            this.tableAdapterManager.CATALOGO_EMPLEADOSTableAdapter = null;
+            this.tableAdapterManager.CATALOGO_ESTADOSTableAdapter = null;
+            this.tableAdapterManager.CATALOGO_PAISESTableAdapter = null;
+            this.tableAdapterManager.CATALOGO_PEDIDO_ESTATUSTableAdapter = null;
+            this.tableAdapterManager.CATALOGO_PROVEEDORESTableAdapter = null;
+            this.tableAdapterManager.CATALOGO_TAMANO_PINATATableAdapter = null;
+            this.tableAdapterManager.CATALOGO_TIPO_PINATATableAdapter = null;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.PEDIDO_PINATATableAdapter = null;
+            this.tableAdapterManager.PRECIO_PINATATableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = FiestasMexicanas.FiestasMexicanasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.USUARIOS_SISTEMATableAdapter = null;
+            // 
+            // v_PROVEEDORESDataGridView
+            // 
+            this.v_PROVEEDORESDataGridView.AllowUserToAddRows = false;
+            this.v_PROVEEDORESDataGridView.AllowUserToDeleteRows = false;
+            this.v_PROVEEDORESDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.v_PROVEEDORESDataGridView.AutoGenerateColumns = false;
+            this.v_PROVEEDORESDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.v_PROVEEDORESDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.v_PROVEEDORESDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10});
+            this.v_PROVEEDORESDataGridView.DataSource = this.v_PROVEEDORESBindingSource;
+            this.v_PROVEEDORESDataGridView.Location = new System.Drawing.Point(18, 286);
+            this.v_PROVEEDORESDataGridView.Name = "v_PROVEEDORESDataGridView";
+            this.v_PROVEEDORESDataGridView.ReadOnly = true;
+            this.v_PROVEEDORESDataGridView.Size = new System.Drawing.Size(892, 355);
+            this.v_PROVEEDORESDataGridView.TabIndex = 34;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 43;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "NOMBRE";
+            this.dataGridViewTextBoxColumn2.HeaderText = "NOMBRE";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 79;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "APELLIDOS";
+            this.dataGridViewTextBoxColumn3.HeaderText = "APELLIDOS";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 91;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "DIRECCION";
+            this.dataGridViewTextBoxColumn4.HeaderText = "DIRECCION";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 91;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "TEL_";
+            this.dataGridViewTextBoxColumn5.HeaderText = "TEL_";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 58;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "CEL_";
+            this.dataGridViewTextBoxColumn6.HeaderText = "CEL_";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 58;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "EMAIL";
+            this.dataGridViewTextBoxColumn7.HeaderText = "EMAIL";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 64;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "PAIS";
+            this.dataGridViewTextBoxColumn8.HeaderText = "PAIS";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 56;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "ESTADO";
+            this.dataGridViewTextBoxColumn9.HeaderText = "ESTADO";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Width = 76;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "CIUDAD";
+            this.dataGridViewTextBoxColumn10.HeaderText = "CIUDAD";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Width = 73;
+            // 
             // frmProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(920, 584);
+            this.ClientSize = new System.Drawing.Size(928, 653);
+            this.Controls.Add(this.v_PROVEEDORESDataGridView);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.lblTitulo);
             this.Name = "frmProveedores";
             this.Text = "Proveedores";
+            this.Load += new System.EventHandler(this.FrmProveedores_Load);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fiestasMexicanasDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.v_PROVEEDORESBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.v_PROVEEDORESDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -332,5 +499,20 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_nombres;
+        private FiestasMexicanasDataSet fiestasMexicanasDataSet;
+        private System.Windows.Forms.BindingSource v_PROVEEDORESBindingSource;
+        private FiestasMexicanasDataSetTableAdapters.v_PROVEEDORESTableAdapter v_PROVEEDORESTableAdapter;
+        private FiestasMexicanasDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridView v_PROVEEDORESDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
     }
 }

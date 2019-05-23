@@ -16,5 +16,12 @@ namespace FiestasMexicanas
         {
             InitializeComponent();
         }
+
+        private void FrmProveedores_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'fiestasMexicanasDataSet.v_PROVEEDORES' table. You can move, or remove it, as needed.
+            this.v_PROVEEDORESTableAdapter.Fill(this.fiestasMexicanasDataSet.v_PROVEEDORES);
+
+        }
     }
 }

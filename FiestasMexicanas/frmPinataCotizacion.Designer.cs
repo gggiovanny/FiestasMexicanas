@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPinataCotizacion));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.radioBtn_grande = new System.Windows.Forms.RadioButton();
             this.gpoTamaño = new System.Windows.Forms.GroupBox();
@@ -74,12 +76,17 @@
             this.select_tipo = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.checkBox_existeMolde = new System.Windows.Forms.CheckBox();
+            this.fiestasMexicanasDataSet = new FiestasMexicanas.FiestasMexicanasDataSet();
+            this.cATALOGOTIPOPINATABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cATALOGO_TIPO_PINATATableAdapter = new FiestasMexicanas.FiestasMexicanasDataSetTableAdapters.CATALOGO_TIPO_PINATATableAdapter();
             this.gpoTamaño.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.select_metrosAprox)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fiestasMexicanasDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cATALOGOTIPOPINATABindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -524,11 +531,14 @@
             // 
             // select_tipo
             // 
+            this.select_tipo.DataSource = this.cATALOGOTIPOPINATABindingSource;
+            this.select_tipo.DisplayMember = "ctpinNombre";
             this.select_tipo.FormattingEnabled = true;
             this.select_tipo.Location = new System.Drawing.Point(10, 22);
             this.select_tipo.Name = "select_tipo";
             this.select_tipo.Size = new System.Drawing.Size(328, 24);
             this.select_tipo.TabIndex = 0;
+            this.select_tipo.ValueMember = "ctpinCodigo";
             // 
             // label5
             // 
@@ -551,6 +561,20 @@
             this.checkBox_existeMolde.Text = "Existe molde";
             this.checkBox_existeMolde.UseVisualStyleBackColor = true;
             // 
+            // fiestasMexicanasDataSet
+            // 
+            this.fiestasMexicanasDataSet.DataSetName = "FiestasMexicanasDataSet";
+            this.fiestasMexicanasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cATALOGOTIPOPINATABindingSource
+            // 
+            this.cATALOGOTIPOPINATABindingSource.DataMember = "CATALOGO_TIPO_PINATA";
+            this.cATALOGOTIPOPINATABindingSource.DataSource = this.fiestasMexicanasDataSet;
+            // 
+            // cATALOGO_TIPO_PINATATableAdapter
+            // 
+            this.cATALOGO_TIPO_PINATATableAdapter.ClearBeforeFill = true;
+            // 
             // frmPinataCotizacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -571,6 +595,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gpoTamaño);
             this.Controls.Add(this.lblTitulo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPinataCotizacion";
             this.Text = "Cotizacion";
             this.Load += new System.EventHandler(this.frmCotizacion_Load);
@@ -584,6 +609,8 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.fiestasMexicanasDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cATALOGOTIPOPINATABindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -637,5 +664,8 @@
         private System.Windows.Forms.CheckBox checkBox_existeMolde;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown select_metrosAprox;
+        private FiestasMexicanasDataSet fiestasMexicanasDataSet;
+        private System.Windows.Forms.BindingSource cATALOGOTIPOPINATABindingSource;
+        private FiestasMexicanasDataSetTableAdapters.CATALOGO_TIPO_PINATATableAdapter cATALOGO_TIPO_PINATATableAdapter;
     }
 }

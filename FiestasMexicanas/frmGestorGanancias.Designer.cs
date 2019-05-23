@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -59,9 +60,22 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.radioBtn_mes = new System.Windows.Forms.RadioButton();
             this.radioBtn_semana = new System.Windows.Forms.RadioButton();
+            this.fiestasMexicanasDataSet = new FiestasMexicanas.FiestasMexicanasDataSet();
+            this.v_GESTOR_GANANCIASBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.v_GESTOR_GANANCIASTableAdapter = new FiestasMexicanas.FiestasMexicanasDataSetTableAdapters.v_GESTOR_GANANCIASTableAdapter();
+            this.tableAdapterManager = new FiestasMexicanas.FiestasMexicanasDataSetTableAdapters.TableAdapterManager();
+            this.v_GESTOR_GANANCIASDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fiestasMexicanasDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.v_GESTOR_GANANCIASBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.v_GESTOR_GANANCIASDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -71,7 +85,7 @@
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(12, 9);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(689, 44);
+            this.lblTitulo.Size = new System.Drawing.Size(824, 44);
             this.lblTitulo.TabIndex = 1;
             this.lblTitulo.Text = "Gestor de ganancias";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -91,7 +105,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(511, 134);
+            this.label2.Location = new System.Drawing.Point(646, 138);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 16);
             this.label2.TabIndex = 11;
@@ -100,7 +114,7 @@
             // txt_cantidadPiñatas
             // 
             this.txt_cantidadPiñatas.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txt_cantidadPiñatas.Location = new System.Drawing.Point(570, 133);
+            this.txt_cantidadPiñatas.Location = new System.Drawing.Point(705, 137);
             this.txt_cantidadPiñatas.Name = "txt_cantidadPiñatas";
             this.txt_cantidadPiñatas.ReadOnly = true;
             this.txt_cantidadPiñatas.Size = new System.Drawing.Size(100, 20);
@@ -110,7 +124,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(442, 100);
+            this.label4.Location = new System.Drawing.Point(577, 104);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(245, 26);
             this.label4.TabIndex = 36;
@@ -151,7 +165,7 @@
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(442, 307);
+            this.label8.Location = new System.Drawing.Point(577, 311);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(245, 26);
             this.label8.TabIndex = 40;
@@ -268,7 +282,7 @@
             // 
             this.txt_gananciaTotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txt_gananciaTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_gananciaTotal.Location = new System.Drawing.Point(601, 503);
+            this.txt_gananciaTotal.Location = new System.Drawing.Point(736, 507);
             this.txt_gananciaTotal.Name = "txt_gananciaTotal";
             this.txt_gananciaTotal.Size = new System.Drawing.Size(100, 26);
             this.txt_gananciaTotal.TabIndex = 55;
@@ -278,7 +292,7 @@
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(463, 506);
+            this.label15.Location = new System.Drawing.Point(598, 510);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(132, 20);
             this.label15.TabIndex = 56;
@@ -312,7 +326,7 @@
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txt_compraVenta);
             this.groupBox1.Controls.Add(this.txt_articulosFiesta);
-            this.groupBox1.Location = new System.Drawing.Point(431, 159);
+            this.groupBox1.Location = new System.Drawing.Point(566, 163);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(253, 145);
             this.groupBox1.TabIndex = 0;
@@ -332,7 +346,7 @@
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.txt_servicios);
             this.groupBox2.Controls.Add(this.txt_gasolina);
-            this.groupBox2.Location = new System.Drawing.Point(431, 336);
+            this.groupBox2.Location = new System.Drawing.Point(566, 340);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(253, 149);
             this.groupBox2.TabIndex = 57;
@@ -377,11 +391,110 @@
             this.radioBtn_semana.Text = "x Semana";
             this.radioBtn_semana.UseVisualStyleBackColor = true;
             // 
+            // fiestasMexicanasDataSet
+            // 
+            this.fiestasMexicanasDataSet.DataSetName = "FiestasMexicanasDataSet";
+            this.fiestasMexicanasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // v_GESTOR_GANANCIASBindingSource
+            // 
+            this.v_GESTOR_GANANCIASBindingSource.DataMember = "v_GESTOR_GANANCIAS";
+            this.v_GESTOR_GANANCIASBindingSource.DataSource = this.fiestasMexicanasDataSet;
+            // 
+            // v_GESTOR_GANANCIASTableAdapter
+            // 
+            this.v_GESTOR_GANANCIASTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.ARTESANOS_PEDIDOSTableAdapter = null;
+            this.tableAdapterManager.ARTESANOSTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CATALOGO_CIUDADESTableAdapter = null;
+            this.tableAdapterManager.CATALOGO_CLIENTESTableAdapter = null;
+            this.tableAdapterManager.CATALOGO_EMPLEADOS_PUESTOSTableAdapter = null;
+            this.tableAdapterManager.CATALOGO_EMPLEADOSTableAdapter = null;
+            this.tableAdapterManager.CATALOGO_ESTADOSTableAdapter = null;
+            this.tableAdapterManager.CATALOGO_PAISESTableAdapter = null;
+            this.tableAdapterManager.CATALOGO_PEDIDO_ESTATUSTableAdapter = null;
+            this.tableAdapterManager.CATALOGO_PROVEEDORESTableAdapter = null;
+            this.tableAdapterManager.CATALOGO_TAMANO_PINATATableAdapter = null;
+            this.tableAdapterManager.CATALOGO_TIPO_PINATATableAdapter = null;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.PEDIDO_PINATATableAdapter = null;
+            this.tableAdapterManager.PRECIO_PINATATableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = FiestasMexicanas.FiestasMexicanasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.USUARIOS_SISTEMATableAdapter = null;
+            // 
+            // v_GESTOR_GANANCIASDataGridView
+            // 
+            this.v_GESTOR_GANANCIASDataGridView.AllowUserToAddRows = false;
+            this.v_GESTOR_GANANCIASDataGridView.AllowUserToDeleteRows = false;
+            this.v_GESTOR_GANANCIASDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.v_GESTOR_GANANCIASDataGridView.AutoGenerateColumns = false;
+            this.v_GESTOR_GANANCIASDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.v_GESTOR_GANANCIASDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.v_GESTOR_GANANCIASDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.v_GESTOR_GANANCIASDataGridView.DataSource = this.v_GESTOR_GANANCIASBindingSource;
+            this.v_GESTOR_GANANCIASDataGridView.Location = new System.Drawing.Point(12, 137);
+            this.v_GESTOR_GANANCIASDataGridView.Name = "v_GESTOR_GANANCIASDataGridView";
+            this.v_GESTOR_GANANCIASDataGridView.ReadOnly = true;
+            this.v_GESTOR_GANANCIASDataGridView.Size = new System.Drawing.Size(544, 352);
+            this.v_GESTOR_GANANCIASDataGridView.TabIndex = 59;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "FECHA";
+            this.dataGridViewTextBoxColumn1.HeaderText = "FECHA";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 67;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "PIÑATAS VENDIDAS";
+            this.dataGridViewTextBoxColumn2.HeaderText = "PIÑATAS VENDIDAS";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 124;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "VENTAS BRUTAS";
+            this.dataGridViewTextBoxColumn3.HeaderText = "VENTAS BRUTAS";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 112;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "IVA";
+            this.dataGridViewTextBoxColumn4.HeaderText = "IVA";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 49;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "VENTAS NETAS";
+            this.dataGridViewTextBoxColumn5.HeaderText = "VENTAS NETAS";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 105;
+            // 
             // frmGestorGanancias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(713, 541);
+            this.ClientSize = new System.Drawing.Size(848, 549);
+            this.Controls.Add(this.v_GESTOR_GANANCIASDataGridView);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -395,12 +508,16 @@
             this.Controls.Add(this.lblTitulo);
             this.Name = "frmGestorGanancias";
             this.Text = "Gestor de ganancias";
+            this.Load += new System.EventHandler(this.FrmGestorGanancias_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fiestasMexicanasDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.v_GESTOR_GANANCIASBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.v_GESTOR_GANANCIASDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -439,5 +556,15 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.RadioButton radioBtn_mes;
         private System.Windows.Forms.RadioButton radioBtn_semana;
+        private FiestasMexicanasDataSet fiestasMexicanasDataSet;
+        private System.Windows.Forms.BindingSource v_GESTOR_GANANCIASBindingSource;
+        private FiestasMexicanasDataSetTableAdapters.v_GESTOR_GANANCIASTableAdapter v_GESTOR_GANANCIASTableAdapter;
+        private FiestasMexicanasDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridView v_GESTOR_GANANCIASDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
     }
 }

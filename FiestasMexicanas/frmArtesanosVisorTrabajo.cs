@@ -21,5 +21,12 @@ namespace FiestasMexicanas
         {
 
         }
+
+        private void FrmArtesanosVisorTrabajo_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'fiestasMexicanasDataSet.v_VISOR_CARGA_TRABAJO' table. You can move, or remove it, as needed.
+            this.v_VISOR_CARGA_TRABAJOTableAdapter.Fill(this.fiestasMexicanasDataSet.v_VISOR_CARGA_TRABAJO);
+
+        }
     }
 }
