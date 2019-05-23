@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioBtn_espera = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.radioBtn_terminada = new System.Windows.Forms.RadioButton();
+            this.radioBtn_forrando = new System.Windows.Forms.RadioButton();
+            this.radioBtn_armando = new System.Windows.Forms.RadioButton();
+            this.btn_guardar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,23 +51,23 @@
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
-            // radioButton1
+            // radioBtn_espera
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(23, 28);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(73, 17);
-            this.radioButton1.TabIndex = 5;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "En espera";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioBtn_espera.AutoSize = true;
+            this.radioBtn_espera.Location = new System.Drawing.Point(23, 28);
+            this.radioBtn_espera.Name = "radioBtn_espera";
+            this.radioBtn_espera.Size = new System.Drawing.Size(73, 17);
+            this.radioBtn_espera.TabIndex = 5;
+            this.radioBtn_espera.TabStop = true;
+            this.radioBtn_espera.Text = "En espera";
+            this.radioBtn_espera.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton4);
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.radioBtn_terminada);
+            this.groupBox1.Controls.Add(this.radioBtn_forrando);
+            this.groupBox1.Controls.Add(this.radioBtn_armando);
+            this.groupBox1.Controls.Add(this.radioBtn_espera);
             this.groupBox1.Location = new System.Drawing.Point(18, 66);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(455, 64);
@@ -75,54 +75,54 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Estatus";
             // 
-            // radioButton4
+            // radioBtn_terminada
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(275, 28);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(69, 17);
-            this.radioButton4.TabIndex = 8;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Terminda";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioBtn_terminada.AutoSize = true;
+            this.radioBtn_terminada.Location = new System.Drawing.Point(275, 28);
+            this.radioBtn_terminada.Name = "radioBtn_terminada";
+            this.radioBtn_terminada.Size = new System.Drawing.Size(75, 17);
+            this.radioBtn_terminada.TabIndex = 8;
+            this.radioBtn_terminada.TabStop = true;
+            this.radioBtn_terminada.Text = "Terminada";
+            this.radioBtn_terminada.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // radioBtn_forrando
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(202, 28);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(67, 17);
-            this.radioButton3.TabIndex = 7;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Forrando";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioBtn_forrando.AutoSize = true;
+            this.radioBtn_forrando.Location = new System.Drawing.Point(202, 28);
+            this.radioBtn_forrando.Name = "radioBtn_forrando";
+            this.radioBtn_forrando.Size = new System.Drawing.Size(67, 17);
+            this.radioBtn_forrando.TabIndex = 7;
+            this.radioBtn_forrando.TabStop = true;
+            this.radioBtn_forrando.Text = "Forrando";
+            this.radioBtn_forrando.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioBtn_armando
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(111, 28);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(67, 17);
-            this.radioButton2.TabIndex = 6;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Armando";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioBtn_armando.AutoSize = true;
+            this.radioBtn_armando.Location = new System.Drawing.Point(111, 28);
+            this.radioBtn_armando.Name = "radioBtn_armando";
+            this.radioBtn_armando.Size = new System.Drawing.Size(67, 17);
+            this.radioBtn_armando.TabIndex = 6;
+            this.radioBtn_armando.TabStop = true;
+            this.radioBtn_armando.Text = "Armando";
+            this.radioBtn_armando.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn_guardar
             // 
-            this.button1.Location = new System.Drawing.Point(479, 76);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 48);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_guardar.Location = new System.Drawing.Point(479, 76);
+            this.btn_guardar.Name = "btn_guardar";
+            this.btn_guardar.Size = new System.Drawing.Size(121, 48);
+            this.btn_guardar.TabIndex = 7;
+            this.btn_guardar.Text = "Guardar";
+            this.btn_guardar.UseVisualStyleBackColor = true;
             // 
             // frmArtesanosVisorTrabajo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(805, 504);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblTitulo);
             this.Name = "frmArtesanosVisorTrabajo";
@@ -136,11 +136,11 @@
         #endregion
 
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioBtn_espera;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RadioButton radioBtn_terminada;
+        private System.Windows.Forms.RadioButton radioBtn_forrando;
+        private System.Windows.Forms.RadioButton radioBtn_armando;
+        private System.Windows.Forms.Button btn_guardar;
     }
 }

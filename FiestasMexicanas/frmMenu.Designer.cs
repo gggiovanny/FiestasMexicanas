@@ -28,98 +28,100 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btn_asignacionTrabajo = new System.Windows.Forms.Button();
+            this.btn_artesanos = new System.Windows.Forms.Button();
+            this.btn_visorCargaTrabajo = new System.Windows.Forms.Button();
+            this.btn_cotizacion = new System.Windows.Forms.Button();
+            this.btn_gestorGanancias = new System.Windows.Forms.Button();
+            this.btn_clientes = new System.Windows.Forms.Button();
+            this.btn_proveedores = new System.Windows.Forms.Button();
+            this.btn_adminPrecios = new System.Windows.Forms.Button();
+            this.btn_catalogoCotizacionesPedidos = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_asignacionTrabajo
             // 
-            this.button1.Location = new System.Drawing.Point(12, 56);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 57);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Asignacion de carga de trabajo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_asignacionTrabajo.Location = new System.Drawing.Point(12, 56);
+            this.btn_asignacionTrabajo.Name = "btn_asignacionTrabajo";
+            this.btn_asignacionTrabajo.Size = new System.Drawing.Size(93, 57);
+            this.btn_asignacionTrabajo.TabIndex = 0;
+            this.btn_asignacionTrabajo.Text = "Asignacion de carga de trabajo";
+            this.btn_asignacionTrabajo.UseVisualStyleBackColor = true;
+            this.btn_asignacionTrabajo.Click += new System.EventHandler(this.Btn_asignacionTrabajo_Click);
             // 
-            // button2
+            // btn_artesanos
             // 
-            this.button2.Location = new System.Drawing.Point(111, 56);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 57);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Artesanos";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_artesanos.Location = new System.Drawing.Point(111, 56);
+            this.btn_artesanos.Name = "btn_artesanos";
+            this.btn_artesanos.Size = new System.Drawing.Size(93, 57);
+            this.btn_artesanos.TabIndex = 1;
+            this.btn_artesanos.Text = "Artesanos";
+            this.btn_artesanos.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn_visorCargaTrabajo
             // 
-            this.button3.Location = new System.Drawing.Point(210, 56);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(93, 57);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Visor de carga de trabajo";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_visorCargaTrabajo.Location = new System.Drawing.Point(210, 56);
+            this.btn_visorCargaTrabajo.Name = "btn_visorCargaTrabajo";
+            this.btn_visorCargaTrabajo.Size = new System.Drawing.Size(93, 57);
+            this.btn_visorCargaTrabajo.TabIndex = 2;
+            this.btn_visorCargaTrabajo.Text = "Visor de carga de trabajo";
+            this.btn_visorCargaTrabajo.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btn_cotizacion
             // 
-            this.button4.Location = new System.Drawing.Point(210, 119);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(93, 57);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Cotización";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_cotizacion.Location = new System.Drawing.Point(210, 119);
+            this.btn_cotizacion.Name = "btn_cotizacion";
+            this.btn_cotizacion.Size = new System.Drawing.Size(93, 57);
+            this.btn_cotizacion.TabIndex = 5;
+            this.btn_cotizacion.Text = "Cotización";
+            this.btn_cotizacion.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btn_gestorGanancias
             // 
-            this.button5.Location = new System.Drawing.Point(111, 119);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(93, 57);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Gestor de ganancias";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btn_gestorGanancias.Location = new System.Drawing.Point(111, 119);
+            this.btn_gestorGanancias.Name = "btn_gestorGanancias";
+            this.btn_gestorGanancias.Size = new System.Drawing.Size(93, 57);
+            this.btn_gestorGanancias.TabIndex = 4;
+            this.btn_gestorGanancias.Text = "Gestor de ganancias";
+            this.btn_gestorGanancias.UseVisualStyleBackColor = true;
+            this.btn_gestorGanancias.Click += new System.EventHandler(this.Button5_Click);
             // 
-            // button6
+            // btn_clientes
             // 
-            this.button6.Location = new System.Drawing.Point(12, 119);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(93, 57);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "Clientes";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btn_clientes.Location = new System.Drawing.Point(12, 119);
+            this.btn_clientes.Name = "btn_clientes";
+            this.btn_clientes.Size = new System.Drawing.Size(93, 57);
+            this.btn_clientes.TabIndex = 3;
+            this.btn_clientes.Text = "Clientes";
+            this.btn_clientes.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btn_proveedores
             // 
-            this.button7.Location = new System.Drawing.Point(210, 182);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(93, 57);
-            this.button7.TabIndex = 8;
-            this.button7.Text = "Proveedores";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btn_proveedores.Location = new System.Drawing.Point(210, 182);
+            this.btn_proveedores.Name = "btn_proveedores";
+            this.btn_proveedores.Size = new System.Drawing.Size(93, 57);
+            this.btn_proveedores.TabIndex = 8;
+            this.btn_proveedores.Text = "Proveedores";
+            this.btn_proveedores.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btn_adminPrecios
             // 
-            this.button8.Location = new System.Drawing.Point(111, 182);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(93, 57);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "Administración de precios";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btn_adminPrecios.Location = new System.Drawing.Point(111, 182);
+            this.btn_adminPrecios.Name = "btn_adminPrecios";
+            this.btn_adminPrecios.Size = new System.Drawing.Size(93, 57);
+            this.btn_adminPrecios.TabIndex = 7;
+            this.btn_adminPrecios.Text = "Administración de precios";
+            this.btn_adminPrecios.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // btn_catalogoCotizacionesPedidos
             // 
-            this.button9.Location = new System.Drawing.Point(12, 182);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(93, 57);
-            this.button9.TabIndex = 6;
-            this.button9.Text = "Catálogo de cotizaciones y pedidos";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btn_catalogoCotizacionesPedidos.Location = new System.Drawing.Point(12, 182);
+            this.btn_catalogoCotizacionesPedidos.Name = "btn_catalogoCotizacionesPedidos";
+            this.btn_catalogoCotizacionesPedidos.Size = new System.Drawing.Size(93, 57);
+            this.btn_catalogoCotizacionesPedidos.TabIndex = 6;
+            this.btn_catalogoCotizacionesPedidos.Text = "Catálogo de cotizaciones y pedidos";
+            this.btn_catalogoCotizacionesPedidos.UseVisualStyleBackColor = true;
             // 
             // lblTitulo
             // 
@@ -139,15 +141,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(316, 253);
             this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_proveedores);
+            this.Controls.Add(this.btn_adminPrecios);
+            this.Controls.Add(this.btn_catalogoCotizacionesPedidos);
+            this.Controls.Add(this.btn_cotizacion);
+            this.Controls.Add(this.btn_gestorGanancias);
+            this.Controls.Add(this.btn_clientes);
+            this.Controls.Add(this.btn_visorCargaTrabajo);
+            this.Controls.Add(this.btn_artesanos);
+            this.Controls.Add(this.btn_asignacionTrabajo);
             this.Name = "frmMenu";
             this.Text = "Menú";
             this.ResumeLayout(false);
@@ -156,15 +158,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btn_asignacionTrabajo;
+        private System.Windows.Forms.Button btn_artesanos;
+        private System.Windows.Forms.Button btn_visorCargaTrabajo;
+        private System.Windows.Forms.Button btn_cotizacion;
+        private System.Windows.Forms.Button btn_gestorGanancias;
+        private System.Windows.Forms.Button btn_clientes;
+        private System.Windows.Forms.Button btn_proveedores;
+        private System.Windows.Forms.Button btn_adminPrecios;
+        private System.Windows.Forms.Button btn_catalogoCotizacionesPedidos;
         private System.Windows.Forms.Label lblTitulo;
     }
 }

@@ -117,7 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="c1FlexGrid1.ColumnInfo" xml:space="preserve">
-    <value>5,0,0,0,0,95,Columns:0{Width:41;Caption:"FECHA";Style:"DataType:System.UInt32;TextAlign:GeneralCenter;";}	1{Width:117;Caption:"PIÑATAS VENDIDAS";}	2{Width:112;Caption:"GANANCIA BRUTA";}	3{Width:38;Caption:"I.V.A.";}	4{Width:100;Caption:"GANANCIA NETA";}	</value>
-  </data>
 </root>

@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPinataPedidos));
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_guardarCotizacionPedido = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -45,21 +44,21 @@
             this.lblTitulo.Text = "Catálogo de cotizaciones y pedidos";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // button1
+            // btn_guardarCotizacionPedido
             // 
-            this.button1.Location = new System.Drawing.Point(645, 56);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_guardarCotizacionPedido.Location = new System.Drawing.Point(645, 56);
+            this.btn_guardarCotizacionPedido.Name = "btn_guardarCotizacionPedido";
+            this.btn_guardarCotizacionPedido.Size = new System.Drawing.Size(75, 23);
+            this.btn_guardarCotizacionPedido.TabIndex = 4;
+            this.btn_guardarCotizacionPedido.Text = "Guardar";
+            this.btn_guardarCotizacionPedido.UseVisualStyleBackColor = true;
             // 
             // frmPinataPedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(736, 425);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_guardarCotizacionPedido);
             this.Controls.Add(this.lblTitulo);
             this.Name = "frmPinataPedidos";
             this.Text = "Catálogo de cotizaciones y pedidos";
@@ -70,6 +69,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_guardarCotizacionPedido;
     }
 }

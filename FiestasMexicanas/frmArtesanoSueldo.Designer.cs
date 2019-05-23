@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmArtesanoSueldo));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.select_semana = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -81,13 +80,13 @@
             this.label14.TabIndex = 33;
             this.label14.Text = "Semana";
             // 
-            // comboBox4
+            // select_semana
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(66, 99);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(64, 21);
-            this.comboBox4.TabIndex = 32;
+            this.select_semana.FormattingEnabled = true;
+            this.select_semana.Location = new System.Drawing.Point(66, 99);
+            this.select_semana.Name = "select_semana";
+            this.select_semana.Size = new System.Drawing.Size(64, 21);
+            this.select_semana.TabIndex = 32;
             // 
             // frmArtesanoSueldo
             // 
@@ -95,7 +94,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(889, 454);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.select_semana);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTitulo);
@@ -112,6 +111,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox select_semana;
     }
 }

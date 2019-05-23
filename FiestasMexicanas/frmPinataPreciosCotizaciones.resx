@@ -117,7 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="c1FlexGrid1.ColumnInfo" xml:space="preserve">
-    <value>8,0,0,0,0,95,Columns:0{Width:57;Caption:"Codigo";Style:"DataType:System.Int32;TextAlign:GeneralCenter;";}	1{Width:76;Caption:"Tipo Piñata";}	2{Width:71;Caption:"Precio chica";Style:"DataType:System.Decimal;TextAlign:GeneralCenter;";}	3{Width:80;Caption:"Precio mediana";Style:"DataType:System.Decimal;TextAlign:GeneralCenter;";}	4{Width:78;Caption:"Precio grande";Style:"DataType:System.Decimal;TextAlign:GeneralCenter;";}	5{Width:82;Caption:"Costo detallada";Style:"DataType:System.Decimal;TextAlign:GeneralCenter;";}	6{Caption:"Alambre Metro";Style:"DataType:System.Decimal;TextAlign:GeneralCenter;";}	7{Width:64;Caption:"Molde";Style:"DataType:System.Boolean;TextAlign:LeftCenter;ImageAlign:CenterCenter;";}	</value>
-  </data>
 </root>

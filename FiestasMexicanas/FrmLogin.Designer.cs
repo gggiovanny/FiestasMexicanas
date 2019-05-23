@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLoginV2));
-            this.txtUsuarioAlias = new System.Windows.Forms.TextBox();
+            this.txt_usuario = new System.Windows.Forms.TextBox();
             this.lblUsuarioAlias = new System.Windows.Forms.Label();
             this.lblContraseña = new System.Windows.Forms.Label();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.btnIniciarSesion = new System.Windows.Forms.Button();
-            this.picSalir = new System.Windows.Forms.PictureBox();
+            this.txt_contraseña = new System.Windows.Forms.TextBox();
+            this.btn_iniciarSesion = new System.Windows.Forms.Button();
+            this.btn_salir = new System.Windows.Forms.PictureBox();
             this.lblMarbolERP = new System.Windows.Forms.Label();
-            this.picMayusculasActivas = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.picSalir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMayusculasActivas)).BeginInit();
+            this.icono_mayus = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icono_mayus)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtUsuarioAlias
+            // txt_usuario
             // 
-            this.txtUsuarioAlias.AcceptsReturn = true;
-            this.txtUsuarioAlias.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtUsuarioAlias.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtUsuarioAlias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuarioAlias.Location = new System.Drawing.Point(121, 98);
-            this.txtUsuarioAlias.Name = "txtUsuarioAlias";
-            this.txtUsuarioAlias.Size = new System.Drawing.Size(391, 26);
-            this.txtUsuarioAlias.TabIndex = 0;
+            this.txt_usuario.AcceptsReturn = true;
+            this.txt_usuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_usuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_usuario.Location = new System.Drawing.Point(121, 98);
+            this.txt_usuario.Name = "txt_usuario";
+            this.txt_usuario.Size = new System.Drawing.Size(391, 26);
+            this.txt_usuario.TabIndex = 0;
             // 
             // lblUsuarioAlias
             // 
@@ -74,43 +74,43 @@
             this.lblContraseña.TabIndex = 6;
             this.lblContraseña.Text = "Contraseña";
             // 
-            // txtContraseña
+            // txt_contraseña
             // 
-            this.txtContraseña.AcceptsReturn = true;
-            this.txtContraseña.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.Location = new System.Drawing.Point(121, 129);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(391, 26);
-            this.txtContraseña.TabIndex = 1;
-            this.txtContraseña.UseSystemPasswordChar = true;
+            this.txt_contraseña.AcceptsReturn = true;
+            this.txt_contraseña.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_contraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_contraseña.Location = new System.Drawing.Point(121, 129);
+            this.txt_contraseña.Name = "txt_contraseña";
+            this.txt_contraseña.Size = new System.Drawing.Size(391, 26);
+            this.txt_contraseña.TabIndex = 1;
+            this.txt_contraseña.UseSystemPasswordChar = true;
             // 
-            // btnIniciarSesion
+            // btn_iniciarSesion
             // 
-            this.btnIniciarSesion.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnIniciarSesion.BackColor = System.Drawing.Color.SlateGray;
-            this.btnIniciarSesion.FlatAppearance.BorderSize = 0;
-            this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIniciarSesion.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciarSesion.ForeColor = System.Drawing.Color.White;
-            this.btnIniciarSesion.Location = new System.Drawing.Point(343, 172);
-            this.btnIniciarSesion.Name = "btnIniciarSesion";
-            this.btnIniciarSesion.Size = new System.Drawing.Size(169, 41);
-            this.btnIniciarSesion.TabIndex = 2;
-            this.btnIniciarSesion.Text = "Iniciar sesión";
-            this.btnIniciarSesion.UseVisualStyleBackColor = false;
+            this.btn_iniciarSesion.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_iniciarSesion.BackColor = System.Drawing.Color.SlateGray;
+            this.btn_iniciarSesion.FlatAppearance.BorderSize = 0;
+            this.btn_iniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_iniciarSesion.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_iniciarSesion.ForeColor = System.Drawing.Color.White;
+            this.btn_iniciarSesion.Location = new System.Drawing.Point(343, 172);
+            this.btn_iniciarSesion.Name = "btn_iniciarSesion";
+            this.btn_iniciarSesion.Size = new System.Drawing.Size(169, 41);
+            this.btn_iniciarSesion.TabIndex = 2;
+            this.btn_iniciarSesion.Text = "Iniciar sesión";
+            this.btn_iniciarSesion.UseVisualStyleBackColor = false;
             // 
-            // picSalir
+            // btn_salir
             // 
-            this.picSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picSalir.BackColor = System.Drawing.Color.DarkRed;
-            this.picSalir.Image = ((System.Drawing.Image)(resources.GetObject("picSalir.Image")));
-            this.picSalir.Location = new System.Drawing.Point(484, -2);
-            this.picSalir.Name = "picSalir";
-            this.picSalir.Size = new System.Drawing.Size(45, 31);
-            this.picSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picSalir.TabIndex = 19;
-            this.picSalir.TabStop = false;
+            this.btn_salir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_salir.BackColor = System.Drawing.Color.DarkRed;
+            this.btn_salir.Image = ((System.Drawing.Image)(resources.GetObject("btn_salir.Image")));
+            this.btn_salir.Location = new System.Drawing.Point(484, -2);
+            this.btn_salir.Name = "btn_salir";
+            this.btn_salir.Size = new System.Drawing.Size(45, 31);
+            this.btn_salir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_salir.TabIndex = 19;
+            this.btn_salir.TabStop = false;
             // 
             // lblMarbolERP
             // 
@@ -123,19 +123,19 @@
             this.lblMarbolERP.TabIndex = 20;
             this.lblMarbolERP.Text = "LOGIN FIESTAS MEXICANAS";
             // 
-            // picMayusculasActivas
+            // icono_mayus
             // 
-            this.picMayusculasActivas.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.picMayusculasActivas.BackColor = System.Drawing.Color.White;
-            this.picMayusculasActivas.Image = ((System.Drawing.Image)(resources.GetObject("picMayusculasActivas.Image")));
-            this.picMayusculasActivas.InitialImage = null;
-            this.picMayusculasActivas.Location = new System.Drawing.Point(490, 132);
-            this.picMayusculasActivas.Name = "picMayusculasActivas";
-            this.picMayusculasActivas.Size = new System.Drawing.Size(20, 20);
-            this.picMayusculasActivas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picMayusculasActivas.TabIndex = 21;
-            this.picMayusculasActivas.TabStop = false;
-            this.picMayusculasActivas.Visible = false;
+            this.icono_mayus.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.icono_mayus.BackColor = System.Drawing.Color.White;
+            this.icono_mayus.Image = ((System.Drawing.Image)(resources.GetObject("icono_mayus.Image")));
+            this.icono_mayus.InitialImage = null;
+            this.icono_mayus.Location = new System.Drawing.Point(490, 132);
+            this.icono_mayus.Name = "icono_mayus";
+            this.icono_mayus.Size = new System.Drawing.Size(20, 20);
+            this.icono_mayus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.icono_mayus.TabIndex = 21;
+            this.icono_mayus.TabStop = false;
+            this.icono_mayus.Visible = false;
             // 
             // FrmLoginV2
             // 
@@ -144,14 +144,14 @@
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(528, 258);
             this.ControlBox = false;
-            this.Controls.Add(this.picMayusculasActivas);
+            this.Controls.Add(this.icono_mayus);
             this.Controls.Add(this.lblMarbolERP);
-            this.Controls.Add(this.picSalir);
-            this.Controls.Add(this.btnIniciarSesion);
+            this.Controls.Add(this.btn_salir);
+            this.Controls.Add(this.btn_iniciarSesion);
             this.Controls.Add(this.lblContraseña);
-            this.Controls.Add(this.txtContraseña);
+            this.Controls.Add(this.txt_contraseña);
             this.Controls.Add(this.lblUsuarioAlias);
-            this.Controls.Add(this.txtUsuarioAlias);
+            this.Controls.Add(this.txt_usuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -159,21 +159,21 @@
             this.Name = "FrmLoginV2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Acceso General";
-            ((System.ComponentModel.ISupportInitialize)(this.picSalir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMayusculasActivas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icono_mayus)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtUsuarioAlias;
+        private System.Windows.Forms.TextBox txt_usuario;
         private System.Windows.Forms.Label lblUsuarioAlias;
         private System.Windows.Forms.Label lblContraseña;
-        private System.Windows.Forms.TextBox txtContraseña;
-        private System.Windows.Forms.Button btnIniciarSesion;
-        private System.Windows.Forms.PictureBox picSalir;
+        private System.Windows.Forms.TextBox txt_contraseña;
+        private System.Windows.Forms.Button btn_iniciarSesion;
+        private System.Windows.Forms.PictureBox btn_salir;
         private System.Windows.Forms.Label lblMarbolERP;
-        private System.Windows.Forms.PictureBox picMayusculasActivas;
+        private System.Windows.Forms.PictureBox icono_mayus;
     }
 }

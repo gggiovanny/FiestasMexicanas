@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmArtesanoAsignacionTrabajo));
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_artesanoPedido = new System.Windows.Forms.Button();
+            this.btn_pedidoArtesano = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
@@ -49,25 +48,25 @@
             this.lblTitulo.Text = "Asignacion de carga de trabajo";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // btn_artesanoPedido
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button1.Location = new System.Drawing.Point(472, 265);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(24, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "->";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_artesanoPedido.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_artesanoPedido.Location = new System.Drawing.Point(472, 265);
+            this.btn_artesanoPedido.Name = "btn_artesanoPedido";
+            this.btn_artesanoPedido.Size = new System.Drawing.Size(24, 23);
+            this.btn_artesanoPedido.TabIndex = 4;
+            this.btn_artesanoPedido.Text = "->";
+            this.btn_artesanoPedido.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_pedidoArtesano
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button2.Location = new System.Drawing.Point(472, 236);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(24, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "<-";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_pedidoArtesano.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_pedidoArtesano.Location = new System.Drawing.Point(472, 236);
+            this.btn_pedidoArtesano.Name = "btn_pedidoArtesano";
+            this.btn_pedidoArtesano.Size = new System.Drawing.Size(24, 23);
+            this.btn_pedidoArtesano.TabIndex = 5;
+            this.btn_pedidoArtesano.Text = "<-";
+            this.btn_pedidoArtesano.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -109,8 +108,8 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_pedidoArtesano);
+            this.Controls.Add(this.btn_artesanoPedido);
             this.Controls.Add(this.lblTitulo);
             this.Name = "frmArtesanoAsignacionTrabajo";
             this.Text = "Asignacion de carga de trabajo";
@@ -121,8 +120,8 @@
         #endregion
 
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_artesanoPedido;
+        private System.Windows.Forms.Button btn_pedidoArtesano;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button3;

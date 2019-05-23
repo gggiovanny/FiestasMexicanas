@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPinataPreciosCotizaciones));
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_guardarPrecios = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -45,21 +44,21 @@
             this.lblTitulo.Text = "Administración de precios";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // btn_guardarPrecios
             // 
-            this.button1.Location = new System.Drawing.Point(450, 82);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_guardarPrecios.Location = new System.Drawing.Point(450, 82);
+            this.btn_guardarPrecios.Name = "btn_guardarPrecios";
+            this.btn_guardarPrecios.Size = new System.Drawing.Size(75, 23);
+            this.btn_guardarPrecios.TabIndex = 5;
+            this.btn_guardarPrecios.Text = "Guardar";
+            this.btn_guardarPrecios.UseVisualStyleBackColor = true;
             // 
             // frmPinataPreciosCotizaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(632, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_guardarPrecios);
             this.Controls.Add(this.lblTitulo);
             this.Name = "frmPinataPreciosCotizaciones";
             this.Text = "Administración de precios";
@@ -70,6 +69,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_guardarPrecios;
     }
 }

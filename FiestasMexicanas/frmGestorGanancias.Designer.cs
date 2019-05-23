@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestorGanancias));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_cantidadPiñatas = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -40,26 +39,26 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txt_compraVenta = new System.Windows.Forms.TextBox();
+            this.txt_articulosFiesta = new System.Windows.Forms.TextBox();
+            this.txt_materiales = new System.Windows.Forms.TextBox();
+            this.txt_sueldos = new System.Windows.Forms.TextBox();
+            this.txt_servicios = new System.Windows.Forms.TextBox();
+            this.txt_gasolina = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txt_otrosGastos = new System.Windows.Forms.TextBox();
+            this.txt_otrosIngresos = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txt_gananciaTotal = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_dulces = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.radioBtn_mes = new System.Windows.Forms.RadioButton();
+            this.radioBtn_semana = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -98,14 +97,14 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "Piñatas:";
             // 
-            // textBox1
+            // txt_cantidadPiñatas
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.textBox1.Location = new System.Drawing.Point(570, 133);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 12;
+            this.txt_cantidadPiñatas.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txt_cantidadPiñatas.Location = new System.Drawing.Point(570, 133);
+            this.txt_cantidadPiñatas.Name = "txt_cantidadPiñatas";
+            this.txt_cantidadPiñatas.ReadOnly = true;
+            this.txt_cantidadPiñatas.Size = new System.Drawing.Size(100, 20);
+            this.txt_cantidadPiñatas.TabIndex = 12;
             // 
             // label4
             // 
@@ -179,47 +178,47 @@
             this.label10.TabIndex = 42;
             this.label10.Text = "Articulos de fiesta:";
             // 
-            // textBox3
+            // txt_compraVenta
             // 
-            this.textBox3.Location = new System.Drawing.Point(139, 57);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 43;
+            this.txt_compraVenta.Location = new System.Drawing.Point(139, 57);
+            this.txt_compraVenta.Name = "txt_compraVenta";
+            this.txt_compraVenta.Size = new System.Drawing.Size(100, 20);
+            this.txt_compraVenta.TabIndex = 43;
             // 
-            // textBox4
+            // txt_articulosFiesta
             // 
-            this.textBox4.Location = new System.Drawing.Point(139, 83);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 44;
+            this.txt_articulosFiesta.Location = new System.Drawing.Point(139, 83);
+            this.txt_articulosFiesta.Name = "txt_articulosFiesta";
+            this.txt_articulosFiesta.Size = new System.Drawing.Size(100, 20);
+            this.txt_articulosFiesta.TabIndex = 44;
             // 
-            // textBox5
+            // txt_materiales
             // 
-            this.textBox5.Location = new System.Drawing.Point(139, 15);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 45;
+            this.txt_materiales.Location = new System.Drawing.Point(139, 15);
+            this.txt_materiales.Name = "txt_materiales";
+            this.txt_materiales.Size = new System.Drawing.Size(100, 20);
+            this.txt_materiales.TabIndex = 45;
             // 
-            // textBox6
+            // txt_sueldos
             // 
-            this.textBox6.Location = new System.Drawing.Point(139, 41);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 46;
+            this.txt_sueldos.Location = new System.Drawing.Point(139, 41);
+            this.txt_sueldos.Name = "txt_sueldos";
+            this.txt_sueldos.Size = new System.Drawing.Size(100, 20);
+            this.txt_sueldos.TabIndex = 46;
             // 
-            // textBox7
+            // txt_servicios
             // 
-            this.textBox7.Location = new System.Drawing.Point(139, 67);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 47;
+            this.txt_servicios.Location = new System.Drawing.Point(139, 67);
+            this.txt_servicios.Name = "txt_servicios";
+            this.txt_servicios.Size = new System.Drawing.Size(100, 20);
+            this.txt_servicios.TabIndex = 47;
             // 
-            // textBox8
+            // txt_gasolina
             // 
-            this.textBox8.Location = new System.Drawing.Point(139, 93);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 48;
+            this.txt_gasolina.Location = new System.Drawing.Point(139, 93);
+            this.txt_gasolina.Name = "txt_gasolina";
+            this.txt_gasolina.Size = new System.Drawing.Size(100, 20);
+            this.txt_gasolina.TabIndex = 48;
             // 
             // label11
             // 
@@ -241,19 +240,19 @@
             this.label12.TabIndex = 50;
             this.label12.Text = "Otros:";
             // 
-            // textBox9
+            // txt_otrosGastos
             // 
-            this.textBox9.Location = new System.Drawing.Point(139, 119);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 51;
+            this.txt_otrosGastos.Location = new System.Drawing.Point(139, 119);
+            this.txt_otrosGastos.Name = "txt_otrosGastos";
+            this.txt_otrosGastos.Size = new System.Drawing.Size(100, 20);
+            this.txt_otrosGastos.TabIndex = 51;
             // 
-            // textBox10
+            // txt_otrosIngresos
             // 
-            this.textBox10.Location = new System.Drawing.Point(139, 109);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 53;
+            this.txt_otrosIngresos.Location = new System.Drawing.Point(139, 109);
+            this.txt_otrosIngresos.Name = "txt_otrosIngresos";
+            this.txt_otrosIngresos.Size = new System.Drawing.Size(100, 20);
+            this.txt_otrosIngresos.TabIndex = 53;
             // 
             // label13
             // 
@@ -265,14 +264,14 @@
             this.label13.TabIndex = 52;
             this.label13.Text = "Otros:";
             // 
-            // textBox11
+            // txt_gananciaTotal
             // 
-            this.textBox11.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(601, 503);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 26);
-            this.textBox11.TabIndex = 55;
+            this.txt_gananciaTotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txt_gananciaTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_gananciaTotal.Location = new System.Drawing.Point(601, 503);
+            this.txt_gananciaTotal.Name = "txt_gananciaTotal";
+            this.txt_gananciaTotal.Size = new System.Drawing.Size(100, 26);
+            this.txt_gananciaTotal.TabIndex = 55;
             // 
             // label15
             // 
@@ -295,24 +294,24 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "Dulces:";
             // 
-            // textBox2
+            // txt_dulces
             // 
-            this.textBox2.Location = new System.Drawing.Point(139, 31);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 14;
+            this.txt_dulces.Location = new System.Drawing.Point(139, 31);
+            this.txt_dulces.Name = "txt_dulces";
+            this.txt_dulces.Size = new System.Drawing.Size(100, 20);
+            this.txt_dulces.TabIndex = 14;
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.groupBox1.Controls.Add(this.textBox10);
+            this.groupBox1.Controls.Add(this.txt_otrosIngresos);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txt_dulces);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.txt_compraVenta);
+            this.groupBox1.Controls.Add(this.txt_articulosFiesta);
             this.groupBox1.Location = new System.Drawing.Point(431, 159);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(253, 145);
@@ -323,16 +322,16 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.groupBox2.Controls.Add(this.textBox9);
+            this.groupBox2.Controls.Add(this.txt_otrosGastos);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.txt_materiales);
             this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.txt_sueldos);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.textBox8);
+            this.groupBox2.Controls.Add(this.txt_servicios);
+            this.groupBox2.Controls.Add(this.txt_gasolina);
             this.groupBox2.Location = new System.Drawing.Point(431, 336);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(253, 149);
@@ -342,8 +341,8 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.radioButton5);
-            this.groupBox3.Controls.Add(this.radioButton6);
+            this.groupBox3.Controls.Add(this.radioBtn_mes);
+            this.groupBox3.Controls.Add(this.radioBtn_semana);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(16, 45);
             this.groupBox3.Name = "groupBox3";
@@ -352,31 +351,31 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Periodo";
             // 
-            // radioButton5
+            // radioBtn_mes
             // 
-            this.radioButton5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton5.Location = new System.Drawing.Point(93, 19);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(58, 19);
-            this.radioButton5.TabIndex = 3;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "x Mes";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.radioBtn_mes.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.radioBtn_mes.AutoSize = true;
+            this.radioBtn_mes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioBtn_mes.Location = new System.Drawing.Point(93, 19);
+            this.radioBtn_mes.Name = "radioBtn_mes";
+            this.radioBtn_mes.Size = new System.Drawing.Size(58, 19);
+            this.radioBtn_mes.TabIndex = 3;
+            this.radioBtn_mes.TabStop = true;
+            this.radioBtn_mes.Text = "x Mes";
+            this.radioBtn_mes.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // radioBtn_semana
             // 
-            this.radioButton6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton6.Location = new System.Drawing.Point(6, 19);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(81, 19);
-            this.radioButton6.TabIndex = 2;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "x Semana";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.radioBtn_semana.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.radioBtn_semana.AutoSize = true;
+            this.radioBtn_semana.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioBtn_semana.Location = new System.Drawing.Point(6, 19);
+            this.radioBtn_semana.Name = "radioBtn_semana";
+            this.radioBtn_semana.Size = new System.Drawing.Size(81, 19);
+            this.radioBtn_semana.TabIndex = 2;
+            this.radioBtn_semana.TabStop = true;
+            this.radioBtn_semana.Text = "x Semana";
+            this.radioBtn_semana.UseVisualStyleBackColor = true;
             // 
             // frmGestorGanancias
             // 
@@ -387,10 +386,10 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.txt_gananciaTotal);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_cantidadPiñatas);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTitulo);
@@ -412,7 +411,7 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_cantidadPiñatas;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -420,25 +419,25 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txt_compraVenta;
+        private System.Windows.Forms.TextBox txt_articulosFiesta;
+        private System.Windows.Forms.TextBox txt_materiales;
+        private System.Windows.Forms.TextBox txt_sueldos;
+        private System.Windows.Forms.TextBox txt_servicios;
+        private System.Windows.Forms.TextBox txt_gasolina;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txt_otrosGastos;
+        private System.Windows.Forms.TextBox txt_otrosIngresos;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txt_gananciaTotal;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_dulces;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton radioBtn_mes;
+        private System.Windows.Forms.RadioButton radioBtn_semana;
     }
 }
