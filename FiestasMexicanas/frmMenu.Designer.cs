@@ -48,7 +48,6 @@
             this.btn_asignacionTrabajo.TabIndex = 0;
             this.btn_asignacionTrabajo.Text = "Asignacion de carga de trabajo";
             this.btn_asignacionTrabajo.UseVisualStyleBackColor = true;
-            this.btn_asignacionTrabajo.Click += new System.EventHandler(this.Btn_asignacionTrabajo_Click);
             // 
             // btn_artesanos
             // 
@@ -85,7 +84,6 @@
             this.btn_gestorGanancias.TabIndex = 4;
             this.btn_gestorGanancias.Text = "Gestor de ganancias";
             this.btn_gestorGanancias.UseVisualStyleBackColor = true;
-            this.btn_gestorGanancias.Click += new System.EventHandler(this.Button5_Click);
             // 
             // btn_clientes
             // 

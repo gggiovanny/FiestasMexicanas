@@ -17,14 +17,5 @@ namespace FiestasMexicanas
             InitializeComponent();
         }
 
-        private void Btn_asignacionTrabajo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button5_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
