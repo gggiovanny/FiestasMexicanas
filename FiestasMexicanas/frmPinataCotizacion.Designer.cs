@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPinataCotizacion));
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.radioBtn_grande = new System.Windows.Forms.RadioButton();
             this.gpoTamaño = new System.Windows.Forms.GroupBox();
-            this.radioBtn_mediana = new System.Windows.Forms.RadioButton();
-            this.radioBtn_chica = new System.Windows.Forms.RadioButton();
+            this.select_tamano = new System.Windows.Forms.ComboBox();
+            this.cATALOGOTAMANOPINATABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fiestasMexicanasDataSet = new FiestasMexicanas.FiestasMexicanasDataSet();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioBtn_detallada = new System.Windows.Forms.RadioButton();
             this.radioBtn_sencilla = new System.Windows.Forms.RadioButton();
@@ -70,23 +70,27 @@
             this.txt_apellidos = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.select_cantidad = new System.Windows.Forms.ComboBox();
             this.btn_guardarPedido = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.select_tipo = new System.Windows.Forms.ComboBox();
+            this.cATALOGOTIPOPINATABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label5 = new System.Windows.Forms.Label();
             this.checkBox_existeMolde = new System.Windows.Forms.CheckBox();
-            this.fiestasMexicanasDataSet = new FiestasMexicanas.FiestasMexicanasDataSet();
-            this.cATALOGOTIPOPINATABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cATALOGO_TIPO_PINATATableAdapter = new FiestasMexicanas.FiestasMexicanasDataSetTableAdapters.CATALOGO_TIPO_PINATATableAdapter();
+            this.fKPEDIDOPINATACATALOGOTIPOPINATABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cATALOGO_TAMANO_PINATATableAdapter = new FiestasMexicanas.FiestasMexicanasDataSetTableAdapters.CATALOGO_TAMANO_PINATATableAdapter();
+            this.num_cantidad = new System.Windows.Forms.NumericUpDown();
             this.gpoTamaño.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cATALOGOTAMANOPINATABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fiestasMexicanasDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.select_metrosAprox)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fiestasMexicanasDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cATALOGOTIPOPINATABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKPEDIDOPINATACATALOGOTIPOPINATABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_cantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -102,25 +106,10 @@
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
-            // radioBtn_grande
-            // 
-            this.radioBtn_grande.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.radioBtn_grande.AutoSize = true;
-            this.radioBtn_grande.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBtn_grande.Location = new System.Drawing.Point(6, 21);
-            this.radioBtn_grande.Name = "radioBtn_grande";
-            this.radioBtn_grande.Size = new System.Drawing.Size(66, 19);
-            this.radioBtn_grande.TabIndex = 2;
-            this.radioBtn_grande.TabStop = true;
-            this.radioBtn_grande.Text = "Grande";
-            this.radioBtn_grande.UseVisualStyleBackColor = true;
-            // 
             // gpoTamaño
             // 
-            this.gpoTamaño.Controls.Add(this.radioBtn_mediana);
-            this.gpoTamaño.Controls.Add(this.radioBtn_chica);
-            this.gpoTamaño.Controls.Add(this.radioBtn_grande);
-            this.gpoTamaño.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpoTamaño.Controls.Add(this.select_tamano);
+            this.gpoTamaño.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpoTamaño.Location = new System.Drawing.Point(15, 115);
             this.gpoTamaño.Name = "gpoTamaño";
             this.gpoTamaño.Size = new System.Drawing.Size(345, 55);
@@ -128,37 +117,35 @@
             this.gpoTamaño.TabStop = false;
             this.gpoTamaño.Text = "Tamaño";
             // 
-            // radioBtn_mediana
+            // select_tamano
             // 
-            this.radioBtn_mediana.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.radioBtn_mediana.AutoSize = true;
-            this.radioBtn_mediana.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBtn_mediana.Location = new System.Drawing.Point(241, 21);
-            this.radioBtn_mediana.Name = "radioBtn_mediana";
-            this.radioBtn_mediana.Size = new System.Drawing.Size(74, 19);
-            this.radioBtn_mediana.TabIndex = 4;
-            this.radioBtn_mediana.TabStop = true;
-            this.radioBtn_mediana.Text = "Mediana";
-            this.radioBtn_mediana.UseVisualStyleBackColor = true;
+            this.select_tamano.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.cATALOGOTAMANOPINATABindingSource, "ctampCodigo", true));
+            this.select_tamano.DataSource = this.cATALOGOTAMANOPINATABindingSource;
+            this.select_tamano.DisplayMember = "ctampNombre";
+            this.select_tamano.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.select_tamano.FormattingEnabled = true;
+            this.select_tamano.Location = new System.Drawing.Point(10, 21);
+            this.select_tamano.Name = "select_tamano";
+            this.select_tamano.Size = new System.Drawing.Size(328, 24);
+            this.select_tamano.TabIndex = 1;
+            this.select_tamano.TabStop = false;
+            this.select_tamano.ValueMember = "ctampCodigo";
             // 
-            // radioBtn_chica
+            // cATALOGOTAMANOPINATABindingSource
             // 
-            this.radioBtn_chica.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.radioBtn_chica.AutoSize = true;
-            this.radioBtn_chica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBtn_chica.Location = new System.Drawing.Point(120, 21);
-            this.radioBtn_chica.Name = "radioBtn_chica";
-            this.radioBtn_chica.Size = new System.Drawing.Size(56, 19);
-            this.radioBtn_chica.TabIndex = 3;
-            this.radioBtn_chica.TabStop = true;
-            this.radioBtn_chica.Text = "Chica";
-            this.radioBtn_chica.UseVisualStyleBackColor = true;
+            this.cATALOGOTAMANOPINATABindingSource.DataMember = "CATALOGO_TAMANO_PINATA";
+            this.cATALOGOTAMANOPINATABindingSource.DataSource = this.fiestasMexicanasDataSet;
+            // 
+            // fiestasMexicanasDataSet
+            // 
+            this.fiestasMexicanasDataSet.DataSetName = "FiestasMexicanasDataSet";
+            this.fiestasMexicanasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.radioBtn_detallada);
             this.groupBox1.Controls.Add(this.radioBtn_sencilla);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(15, 176);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(345, 55);
@@ -171,7 +158,7 @@
             this.radioBtn_detallada.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.radioBtn_detallada.AutoSize = true;
             this.radioBtn_detallada.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBtn_detallada.Location = new System.Drawing.Point(120, 25);
+            this.radioBtn_detallada.Location = new System.Drawing.Point(109, 25);
             this.radioBtn_detallada.Name = "radioBtn_detallada";
             this.radioBtn_detallada.Size = new System.Drawing.Size(78, 19);
             this.radioBtn_detallada.TabIndex = 3;
@@ -184,7 +171,7 @@
             this.radioBtn_sencilla.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.radioBtn_sencilla.AutoSize = true;
             this.radioBtn_sencilla.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBtn_sencilla.Location = new System.Drawing.Point(6, 21);
+            this.radioBtn_sencilla.Location = new System.Drawing.Point(11, 25);
             this.radioBtn_sencilla.Name = "radioBtn_sencilla";
             this.radioBtn_sencilla.Size = new System.Drawing.Size(69, 19);
             this.radioBtn_sencilla.TabIndex = 2;
@@ -280,6 +267,8 @@
             // 
             // txt_nombres
             // 
+            this.txt_nombres.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txt_nombres.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txt_nombres.Location = new System.Drawing.Point(83, 19);
             this.txt_nombres.Name = "txt_nombres";
             this.txt_nombres.Size = new System.Drawing.Size(117, 20);
@@ -345,6 +334,8 @@
             // 
             // txt_razonSocial
             // 
+            this.txt_razonSocial.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txt_razonSocial.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txt_razonSocial.Location = new System.Drawing.Point(83, 45);
             this.txt_razonSocial.Name = "txt_razonSocial";
             this.txt_razonSocial.Size = new System.Drawing.Size(404, 20);
@@ -422,6 +413,8 @@
             // 
             // txt_cel
             // 
+            this.txt_cel.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txt_cel.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txt_cel.Location = new System.Drawing.Point(250, 124);
             this.txt_cel.Name = "txt_cel";
             this.txt_cel.Size = new System.Drawing.Size(117, 20);
@@ -447,6 +440,8 @@
             // 
             // txt_email
             // 
+            this.txt_email.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txt_email.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txt_email.Location = new System.Drawing.Point(83, 150);
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(176, 20);
@@ -454,6 +449,8 @@
             // 
             // txt_tel
             // 
+            this.txt_tel.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txt_tel.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txt_tel.Location = new System.Drawing.Point(83, 124);
             this.txt_tel.Name = "txt_tel";
             this.txt_tel.Size = new System.Drawing.Size(117, 20);
@@ -470,6 +467,8 @@
             // 
             // txt_direccion
             // 
+            this.txt_direccion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txt_direccion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txt_direccion.Location = new System.Drawing.Point(83, 71);
             this.txt_direccion.Name = "txt_direccion";
             this.txt_direccion.Size = new System.Drawing.Size(404, 20);
@@ -477,6 +476,8 @@
             // 
             // txt_apellidos
             // 
+            this.txt_apellidos.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txt_apellidos.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txt_apellidos.Location = new System.Drawing.Point(263, 19);
             this.txt_apellidos.Name = "txt_apellidos";
             this.txt_apellidos.Size = new System.Drawing.Size(224, 20);
@@ -500,14 +501,6 @@
             this.label14.TabIndex = 31;
             this.label14.Text = "Cantidad";
             // 
-            // select_cantidad
-            // 
-            this.select_cantidad.FormattingEnabled = true;
-            this.select_cantidad.Location = new System.Drawing.Point(71, 298);
-            this.select_cantidad.Name = "select_cantidad";
-            this.select_cantidad.Size = new System.Drawing.Size(64, 21);
-            this.select_cantidad.TabIndex = 30;
-            // 
             // btn_guardarPedido
             // 
             this.btn_guardarPedido.Location = new System.Drawing.Point(413, 604);
@@ -516,6 +509,7 @@
             this.btn_guardarPedido.TabIndex = 32;
             this.btn_guardarPedido.Text = "Guardar como pedido";
             this.btn_guardarPedido.UseVisualStyleBackColor = true;
+            this.btn_guardarPedido.Click += new System.EventHandler(this.Btn_guardarPedido_Click);
             // 
             // groupBox3
             // 
@@ -531,14 +525,22 @@
             // 
             // select_tipo
             // 
+            this.select_tipo.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.cATALOGOTIPOPINATABindingSource, "ctpinCodigo", true));
             this.select_tipo.DataSource = this.cATALOGOTIPOPINATABindingSource;
             this.select_tipo.DisplayMember = "ctpinNombre";
+            this.select_tipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.select_tipo.FormattingEnabled = true;
-            this.select_tipo.Location = new System.Drawing.Point(10, 22);
+            this.select_tipo.Location = new System.Drawing.Point(11, 21);
             this.select_tipo.Name = "select_tipo";
             this.select_tipo.Size = new System.Drawing.Size(328, 24);
             this.select_tipo.TabIndex = 0;
+            this.select_tipo.TabStop = false;
             this.select_tipo.ValueMember = "ctpinCodigo";
+            // 
+            // cATALOGOTIPOPINATABindingSource
+            // 
+            this.cATALOGOTIPOPINATABindingSource.DataMember = "CATALOGO_TIPO_PINATA";
+            this.cATALOGOTIPOPINATABindingSource.DataSource = this.fiestasMexicanasDataSet;
             // 
             // label5
             // 
@@ -561,29 +563,41 @@
             this.checkBox_existeMolde.Text = "Existe molde";
             this.checkBox_existeMolde.UseVisualStyleBackColor = true;
             // 
-            // fiestasMexicanasDataSet
-            // 
-            this.fiestasMexicanasDataSet.DataSetName = "FiestasMexicanasDataSet";
-            this.fiestasMexicanasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cATALOGOTIPOPINATABindingSource
-            // 
-            this.cATALOGOTIPOPINATABindingSource.DataMember = "CATALOGO_TIPO_PINATA";
-            this.cATALOGOTIPOPINATABindingSource.DataSource = this.fiestasMexicanasDataSet;
-            // 
             // cATALOGO_TIPO_PINATATableAdapter
             // 
             this.cATALOGO_TIPO_PINATATableAdapter.ClearBeforeFill = true;
+            // 
+            // cATALOGO_TAMANO_PINATATableAdapter
+            // 
+            this.cATALOGO_TAMANO_PINATATableAdapter.ClearBeforeFill = true;
+            // 
+            // num_cantidad
+            // 
+            this.num_cantidad.Location = new System.Drawing.Point(67, 300);
+            this.num_cantidad.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.num_cantidad.Name = "num_cantidad";
+            this.num_cantidad.ReadOnly = true;
+            this.num_cantidad.Size = new System.Drawing.Size(50, 20);
+            this.num_cantidad.TabIndex = 34;
+            this.num_cantidad.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // frmPinataCotizacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(547, 631);
+            this.Controls.Add(this.num_cantidad);
             this.Controls.Add(this.checkBox_existeMolde);
             this.Controls.Add(this.btn_guardarPedido);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.select_cantidad);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.checkBox1);
@@ -600,7 +614,8 @@
             this.Text = "Cotizacion";
             this.Load += new System.EventHandler(this.frmCotizacion_Load);
             this.gpoTamaño.ResumeLayout(false);
-            this.gpoTamaño.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cATALOGOTAMANOPINATABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fiestasMexicanasDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -609,8 +624,9 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.fiestasMexicanasDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cATALOGOTIPOPINATABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKPEDIDOPINATACATALOGOTIPOPINATABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_cantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -619,10 +635,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.RadioButton radioBtn_grande;
         private System.Windows.Forms.GroupBox gpoTamaño;
-        private System.Windows.Forms.RadioButton radioBtn_mediana;
-        private System.Windows.Forms.RadioButton radioBtn_chica;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioBtn_detallada;
         private System.Windows.Forms.RadioButton radioBtn_sencilla;
@@ -652,20 +665,24 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txt_email;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox select_cantidad;
         private System.Windows.Forms.TextBox txt_razonSocial;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.RichTextBox txt_descripcionPinata;
         private System.Windows.Forms.Button btn_guardarPedido;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox select_tipo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox checkBox_existeMolde;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown select_metrosAprox;
+        private System.Windows.Forms.ComboBox select_tamano;
+        private System.Windows.Forms.ComboBox select_tipo;
         private FiestasMexicanasDataSet fiestasMexicanasDataSet;
-        private System.Windows.Forms.BindingSource cATALOGOTIPOPINATABindingSource;
         private FiestasMexicanasDataSetTableAdapters.CATALOGO_TIPO_PINATATableAdapter cATALOGO_TIPO_PINATATableAdapter;
+        private System.Windows.Forms.BindingSource cATALOGOTIPOPINATABindingSource;
+        private System.Windows.Forms.BindingSource fKPEDIDOPINATACATALOGOTIPOPINATABindingSource;
+        private System.Windows.Forms.BindingSource cATALOGOTAMANOPINATABindingSource;
+        private FiestasMexicanasDataSetTableAdapters.CATALOGO_TAMANO_PINATATableAdapter cATALOGO_TAMANO_PINATATableAdapter;
+        private System.Windows.Forms.NumericUpDown num_cantidad;
     }
 }
