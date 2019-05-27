@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace FiestasMexicanas
 {
@@ -17,24 +18,49 @@ namespace FiestasMexicanas
             InitializeComponent();
         }
 
-        private void Pruebas_Load(object sender, EventArgs e)
-        {
-            
-
-        }
-
-        private void CATALOGO_PAISESBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.tableAdapterManager.UpdateAll(this.fiestasMexicanasDataSet);
-
-        }
-
         private void Pruebas_Load_1(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'fiestasMexicanasDataSet.v_COTIZACIONES' table. You can move, or remove it, as needed.
-            this.v_COTIZACIONESTableAdapter.Fill(this.fiestasMexicanasDataSet.v_COTIZACIONES);
+            PoblarComboBoxTablaSQL();
+            PoblarTablaSQL();
+        }
 
+        private void PoblarTablaSQL()
+        {
+
+            string sConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["FiestasMexicanas.Properties.Settings.FiestasMexicanasConnectionStringBueno"].ConnectionString;
+
+            using (SqlConnection conexion = new SqlConnection(sConnectionString))
+            {
+                conexion.Open();
+
+                SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM PEDIDO_PINATA;", conexion);
+                DataTable dbTabla = new DataTable();
+                adapter.Fill(dbTabla);
+                dataGridView1.DataSource = dbTabla;
+
+                conexion.Close();
+            }
+
+        }
+
+        private void PoblarComboBoxTablaSQL()
+        {
+            string sConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["FiestasMexicanas.Properties.Settings.FiestasMexicanasConnectionStringBueno"].ConnectionString;
+
+            using (SqlConnection conexion = new SqlConnection(sConnectionString))
+            {
+                conexion.Open();
+
+                SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM CATALOGO_TIPO_PINATA;", conexion);
+                DataTable dbTabla = new DataTable();
+                adapter.Fill(dbTabla);
+                tlistTipoPinata.ValueMember = "ctpinCodigo";
+                tlistTipoPinata.DisplayMember = "ctpinNombre";
+                tlistTipoPinata.DataSource = dbTabla;
+
+
+                conexion.Close();
+            }
         }
     }
 }

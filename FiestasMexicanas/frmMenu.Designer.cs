@@ -142,6 +142,7 @@
             this.lblTitulo.TabIndex = 31;
             this.lblTitulo.Text = "Menú principal";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitulo.Click += new System.EventHandler(this.LblTitulo_Click);
             // 
             // frmMenu
             // 

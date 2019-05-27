@@ -62,5 +62,10 @@ namespace FiestasMexicanas
         {
             new frmProveedores().ShowDialog();
         }
+
+        private void LblTitulo_Click(object sender, EventArgs e)
+        {
+            new Pruebas().ShowDialog();
+        }
     }
 }
