@@ -28,13 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPinataCotizacion));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.gpoTamaño = new System.Windows.Forms.GroupBox();
             this.select_tamano = new System.Windows.Forms.ComboBox();
-            this.cATALOGOTAMANOPINATABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fiestasMexicanasDataSet = new FiestasMexicanas.FiestasMexicanasDataSet();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioBtn_detallada = new System.Windows.Forms.RadioButton();
             this.radioBtn_sencilla = new System.Windows.Forms.RadioButton();
@@ -73,23 +70,15 @@
             this.btn_guardarPedido = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.select_tipo = new System.Windows.Forms.ComboBox();
-            this.cATALOGOTIPOPINATABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label5 = new System.Windows.Forms.Label();
             this.checkBox_existeMolde = new System.Windows.Forms.CheckBox();
-            this.cATALOGO_TIPO_PINATATableAdapter = new FiestasMexicanas.FiestasMexicanasDataSetTableAdapters.CATALOGO_TIPO_PINATATableAdapter();
-            this.fKPEDIDOPINATACATALOGOTIPOPINATABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cATALOGO_TAMANO_PINATATableAdapter = new FiestasMexicanas.FiestasMexicanasDataSetTableAdapters.CATALOGO_TAMANO_PINATATableAdapter();
             this.num_cantidad = new System.Windows.Forms.NumericUpDown();
             this.gpoTamaño.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cATALOGOTAMANOPINATABindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fiestasMexicanasDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.select_metrosAprox)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cATALOGOTIPOPINATABindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKPEDIDOPINATACATALOGOTIPOPINATABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_cantidad)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,9 +108,6 @@
             // 
             // select_tamano
             // 
-            this.select_tamano.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.cATALOGOTAMANOPINATABindingSource, "ctampCodigo", true));
-            this.select_tamano.DataSource = this.cATALOGOTAMANOPINATABindingSource;
-            this.select_tamano.DisplayMember = "ctampNombre";
             this.select_tamano.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.select_tamano.FormattingEnabled = true;
             this.select_tamano.Location = new System.Drawing.Point(10, 21);
@@ -130,16 +116,6 @@
             this.select_tamano.TabIndex = 1;
             this.select_tamano.TabStop = false;
             this.select_tamano.ValueMember = "ctampCodigo";
-            // 
-            // cATALOGOTAMANOPINATABindingSource
-            // 
-            this.cATALOGOTAMANOPINATABindingSource.DataMember = "CATALOGO_TAMANO_PINATA";
-            this.cATALOGOTAMANOPINATABindingSource.DataSource = this.fiestasMexicanasDataSet;
-            // 
-            // fiestasMexicanasDataSet
-            // 
-            this.fiestasMexicanasDataSet.DataSetName = "FiestasMexicanasDataSet";
-            this.fiestasMexicanasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox1
             // 
@@ -267,12 +243,14 @@
             // 
             // txt_nombres
             // 
-            this.txt_nombres.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txt_nombres.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txt_nombres.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txt_nombres.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_nombres.Location = new System.Drawing.Point(83, 19);
             this.txt_nombres.Name = "txt_nombres";
             this.txt_nombres.Size = new System.Drawing.Size(117, 20);
             this.txt_nombres.TabIndex = 13;
+            this.txt_nombres.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.Txt_nombres_PreviewKeyDown);
             // 
             // label3
             // 
@@ -334,8 +312,9 @@
             // 
             // txt_razonSocial
             // 
-            this.txt_razonSocial.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txt_razonSocial.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txt_razonSocial.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txt_razonSocial.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_razonSocial.Location = new System.Drawing.Point(83, 45);
             this.txt_razonSocial.Name = "txt_razonSocial";
             this.txt_razonSocial.Size = new System.Drawing.Size(404, 20);
@@ -354,7 +333,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(363, 100);
+            this.label12.Location = new System.Drawing.Point(48, 100);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(29, 13);
             this.label12.TabIndex = 29;
@@ -363,10 +342,12 @@
             // select_pais
             // 
             this.select_pais.FormattingEnabled = true;
-            this.select_pais.Location = new System.Drawing.Point(398, 97);
+            this.select_pais.Location = new System.Drawing.Point(83, 97);
             this.select_pais.Name = "select_pais";
             this.select_pais.Size = new System.Drawing.Size(89, 21);
             this.select_pais.TabIndex = 28;
+            this.select_pais.Tag = "-1";
+            this.select_pais.SelectedIndexChanged += new System.EventHandler(this.Select_pais_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -384,11 +365,13 @@
             this.select_estado.Name = "select_estado";
             this.select_estado.Size = new System.Drawing.Size(89, 21);
             this.select_estado.TabIndex = 26;
+            this.select_estado.Tag = "-1";
+            this.select_estado.SelectedIndexChanged += new System.EventHandler(this.Select_estado_SelectedIndexChanged);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(37, 100);
+            this.label10.Location = new System.Drawing.Point(352, 100);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(40, 13);
             this.label10.TabIndex = 25;
@@ -397,7 +380,7 @@
             // select_ciudad
             // 
             this.select_ciudad.FormattingEnabled = true;
-            this.select_ciudad.Location = new System.Drawing.Point(83, 97);
+            this.select_ciudad.Location = new System.Drawing.Point(398, 97);
             this.select_ciudad.Name = "select_ciudad";
             this.select_ciudad.Size = new System.Drawing.Size(89, 21);
             this.select_ciudad.TabIndex = 24;
@@ -413,8 +396,9 @@
             // 
             // txt_cel
             // 
-            this.txt_cel.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txt_cel.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txt_cel.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txt_cel.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_cel.Location = new System.Drawing.Point(250, 124);
             this.txt_cel.Name = "txt_cel";
             this.txt_cel.Size = new System.Drawing.Size(117, 20);
@@ -440,8 +424,9 @@
             // 
             // txt_email
             // 
-            this.txt_email.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txt_email.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txt_email.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txt_email.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_email.Location = new System.Drawing.Point(83, 150);
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(176, 20);
@@ -449,8 +434,9 @@
             // 
             // txt_tel
             // 
-            this.txt_tel.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txt_tel.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txt_tel.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txt_tel.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_tel.Location = new System.Drawing.Point(83, 124);
             this.txt_tel.Name = "txt_tel";
             this.txt_tel.Size = new System.Drawing.Size(117, 20);
@@ -467,8 +453,9 @@
             // 
             // txt_direccion
             // 
-            this.txt_direccion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txt_direccion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txt_direccion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txt_direccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_direccion.Location = new System.Drawing.Point(83, 71);
             this.txt_direccion.Name = "txt_direccion";
             this.txt_direccion.Size = new System.Drawing.Size(404, 20);
@@ -476,8 +463,9 @@
             // 
             // txt_apellidos
             // 
-            this.txt_apellidos.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txt_apellidos.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txt_apellidos.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txt_apellidos.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_apellidos.Location = new System.Drawing.Point(263, 19);
             this.txt_apellidos.Name = "txt_apellidos";
             this.txt_apellidos.Size = new System.Drawing.Size(224, 20);
@@ -525,9 +513,6 @@
             // 
             // select_tipo
             // 
-            this.select_tipo.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.cATALOGOTIPOPINATABindingSource, "ctpinCodigo", true));
-            this.select_tipo.DataSource = this.cATALOGOTIPOPINATABindingSource;
-            this.select_tipo.DisplayMember = "ctpinNombre";
             this.select_tipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.select_tipo.FormattingEnabled = true;
             this.select_tipo.Location = new System.Drawing.Point(11, 21);
@@ -536,11 +521,6 @@
             this.select_tipo.TabIndex = 0;
             this.select_tipo.TabStop = false;
             this.select_tipo.ValueMember = "ctpinCodigo";
-            // 
-            // cATALOGOTIPOPINATABindingSource
-            // 
-            this.cATALOGOTIPOPINATABindingSource.DataMember = "CATALOGO_TIPO_PINATA";
-            this.cATALOGOTIPOPINATABindingSource.DataSource = this.fiestasMexicanasDataSet;
             // 
             // label5
             // 
@@ -562,14 +542,6 @@
             this.checkBox_existeMolde.TabIndex = 33;
             this.checkBox_existeMolde.Text = "Existe molde";
             this.checkBox_existeMolde.UseVisualStyleBackColor = true;
-            // 
-            // cATALOGO_TIPO_PINATATableAdapter
-            // 
-            this.cATALOGO_TIPO_PINATATableAdapter.ClearBeforeFill = true;
-            // 
-            // cATALOGO_TAMANO_PINATATableAdapter
-            // 
-            this.cATALOGO_TAMANO_PINATATableAdapter.ClearBeforeFill = true;
             // 
             // num_cantidad
             // 
@@ -614,8 +586,6 @@
             this.Text = "Cotizacion";
             this.Load += new System.EventHandler(this.frmCotizacion_Load);
             this.gpoTamaño.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cATALOGOTAMANOPINATABindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fiestasMexicanasDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -624,8 +594,6 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cATALOGOTIPOPINATABindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKPEDIDOPINATACATALOGOTIPOPINATABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_cantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -677,12 +645,6 @@
         private System.Windows.Forms.NumericUpDown select_metrosAprox;
         private System.Windows.Forms.ComboBox select_tamano;
         private System.Windows.Forms.ComboBox select_tipo;
-        private FiestasMexicanasDataSet fiestasMexicanasDataSet;
-        private FiestasMexicanasDataSetTableAdapters.CATALOGO_TIPO_PINATATableAdapter cATALOGO_TIPO_PINATATableAdapter;
-        private System.Windows.Forms.BindingSource cATALOGOTIPOPINATABindingSource;
-        private System.Windows.Forms.BindingSource fKPEDIDOPINATACATALOGOTIPOPINATABindingSource;
-        private System.Windows.Forms.BindingSource cATALOGOTAMANOPINATABindingSource;
-        private FiestasMexicanasDataSetTableAdapters.CATALOGO_TAMANO_PINATATableAdapter cATALOGO_TAMANO_PINATATableAdapter;
         private System.Windows.Forms.NumericUpDown num_cantidad;
     }
 }
