@@ -28,44 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tlistTipoPinata = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.dgrdCotizacion = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrdCotizacion)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // richTextBox1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.tlistTipoPinata});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 36);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1126, 484);
-            this.dataGridView1.TabIndex = 0;
+            this.richTextBox1.Location = new System.Drawing.Point(12, 26);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(1126, 172);
+            this.richTextBox1.TabIndex = 1;
+            this.richTextBox1.Text = "";
             // 
-            // tlistTipoPinata
+            // dgrdCotizacion
             // 
-            this.tlistTipoPinata.DataPropertyName = "ctpinCodigo";
-            this.tlistTipoPinata.HeaderText = "Tipo";
-            this.tlistTipoPinata.Name = "tlistTipoPinata";
+            this.dgrdCotizacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgrdCotizacion.Location = new System.Drawing.Point(12, 204);
+            this.dgrdCotizacion.Name = "dgrdCotizacion";
+            this.dgrdCotizacion.Size = new System.Drawing.Size(1126, 316);
+            this.dgrdCotizacion.TabIndex = 2;
             // 
             // Pruebas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1150, 532);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgrdCotizacion);
+            this.Controls.Add(this.richTextBox1);
             this.Name = "Pruebas";
             this.Text = "Pruebas";
             this.Load += new System.EventHandler(this.Pruebas_Load_1);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrdCotizacion)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewComboBoxColumn tlistTipoPinata;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.DataGridView dgrdCotizacion;
     }
 }

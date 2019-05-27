@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FiestasMexicanas
@@ -23,6 +18,7 @@ namespace FiestasMexicanas
         decimal dPrecioGrande = 0;
         decimal dExtraDetalle = 0;
         decimal dAlambreMetro = 0;
+        clsMetodosSQL sql = new clsMetodosSQL();
         #endregion
 
         #region CONSTRUCTOR
@@ -31,9 +27,9 @@ namespace FiestasMexicanas
             InitializeComponent();
             Limpiar();
             PoblarAutocompletadoSQL();
-            PoblarComboBoxSQL(select_tipo, "CATALOGO_TIPO_PINATA", "ctpinNombre");
-            PoblarComboBoxSQL(select_tamano, "CATALOGO_TAMANO_PINATA", "ctampNombre");
-            PoblarComboBoxSQL(select_pais, "CATALOGO_PAISES", "cpaiNombre");
+            sql.PoblarComboBox(select_tipo, "CATALOGO_TIPO_PINATA", "ctpinNombre");
+            sql.PoblarComboBox(select_tamano, "CATALOGO_TAMANO_PINATA", "ctampNombre");
+            sql.PoblarComboBox(select_pais, "CATALOGO_PAISES", "cpaiNombre");
         }
         #endregion
 
@@ -71,7 +67,7 @@ namespace FiestasMexicanas
                 select_estado.Text = "";
                 select_ciudad.Items.Clear();
                 select_ciudad.Text = "";
-                PoblarComboBoxSQL(select_estado, "CATALOGO_ESTADOS", "cedoNombre", "WHERE cpaiIndice = " + cpaiIndice);
+                sql.PoblarComboBox(select_estado, "CATALOGO_ESTADOS", "cedoNombre", "WHERE cpaiIndice = " + cpaiIndice);
                 select_pais.Tag = cpaiIndice;
             }
         }
@@ -85,11 +81,53 @@ namespace FiestasMexicanas
             {
                 select_ciudad.Items.Clear();
                 select_ciudad.Text = "";
-                PoblarComboBoxSQL(select_ciudad, "CATALOGO_CIUDADES", "cciuNombre", "WHERE cpaiIndice = " + cpaiIndice + " AND cedoIndice = " + cedoIndice);
+                sql.PoblarComboBox(select_ciudad, "CATALOGO_CIUDADES", "cciuNombre", "WHERE cpaiIndice = " + cpaiIndice + " AND cedoIndice = " + cedoIndice);
                 select_estado.Tag = cedoIndice;
             }
         }
 
+        private void Select_tipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            PoblarExistenciaMolde();
+            ObtenerPrecios();
+            select_tipo.BackColor = SystemColors.Window;
+            select_tipo.FlatStyle = FlatStyle.Standard;
+        }
+
+        private void Check_LlevaEstructuraAlambre_CheckedChanged(object sender, EventArgs e)
+        {
+            num_metrosAprox.Enabled = check_LlevaEstructuraAlambre.Checked;
+            num_metrosAprox.Value = 0;
+        }
+
+        private void Select_tamano_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            select_tamano.BackColor = SystemColors.Window;
+            select_tamano.FlatStyle = FlatStyle.Standard;
+
+        }
+
+        private void Txt_AutoCompletadoLlenar(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.Tab || e.KeyCode == Keys.Enter)
+            {
+                if (sender.GetType() == typeof(TextBox))
+                {
+                    TextBox txt = sender as TextBox;
+                    int indicePersona = txt.AutoCompleteCustomSource.IndexOf(txt.Text);
+
+                    if (indicePersona >= 0)
+                    {
+                        clienteNuevo = false;
+                        AutoCompletadoSugerenciaAceptada(indicePersona);
+                    }
+                    else
+                    {
+                        clienteNuevo = true;
+                    }
+                }
+            }
+        }
         #endregion
 
         #region METODOS
@@ -126,7 +164,7 @@ namespace FiestasMexicanas
 	                                        ppedFechaEntregaProgramada
                                         )
                                         VALUES ( {0}, {1}, {2}, {3}, '{4}', {5}, {6}, {7}, CONVERT(date, '{8}'), CONVERT(date, '{9}') );",
-                                        ObtenerUltimoRegistroSQL("PEDIDO_PINATA") + 1,
+                                        sql.ObtenerUltimoRegistro("PEDIDO_PINATA") + 1,
                                         select_tipo.SelectedIndex + 1,
                                         select_tamano.SelectedIndex + 1,
                                         radioBtn_detallada.Checked ? 1 : 0,
@@ -198,29 +236,7 @@ namespace FiestasMexicanas
 
                 conexion.Close();
             }
-        }
-
-        private void Txt_AutoCompletadoLlenar(object sender, PreviewKeyDownEventArgs e)
-        {
-            if (e.KeyCode == Keys.Tab || e.KeyCode == Keys.Enter)
-            {
-                if (sender.GetType() == typeof(TextBox))
-                {
-                    TextBox txt = sender as TextBox;
-                    int indicePersona = txt.AutoCompleteCustomSource.IndexOf(txt.Text);
-
-                    if (indicePersona >= 0)
-                    {
-                        clienteNuevo = false;
-                        AutoCompletadoSugerenciaAceptada(indicePersona);
-                    }
-                    else
-                    {
-                        clienteNuevo = true;
-                    }
-                }
-            }
-        }
+        }        
 
         private void AutoCompletadoSugerenciaAceptada(int indicePersona)
         {
@@ -236,48 +252,6 @@ namespace FiestasMexicanas
             select_estado.Text = select_estado.AutoCompleteCustomSource[indicePersona];
             select_ciudad.Text = select_ciudad.AutoCompleteCustomSource[indicePersona];
         }
-
-        private void PoblarComboBoxSQL(ComboBox combobox, string TABLA, string campo, string WHERE = "")
-        {
-
-            string sConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["FiestasMexicanas.Properties.Settings.FiestasMexicanasConnectionStringBueno"].ConnectionString;
-
-            using (SqlConnection conexion = new SqlConnection(sConnectionString))
-            {
-                conexion.Open();
-                SqlCommand comando = conexion.CreateCommand();
-                comando.CommandType = CommandType.Text;
-                comando.CommandText = @"SELECT * FROM " + TABLA + " " + WHERE + ";";
-                using (SqlDataReader reader = comando.ExecuteReader())
-                {
-                    while (reader.Read())
-                        combobox.Items.Add(reader[campo]);
-                }            
-                conexion.Close();
-            }
-
-        }
-
-        private int ObtenerUltimoRegistroSQL(string TABLA)
-        {
-            int ultimo = 0;
-
-            string sConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["FiestasMexicanas.Properties.Settings.FiestasMexicanasConnectionStringBueno"].ConnectionString;
-
-            using (SqlConnection conexion = new SqlConnection(sConnectionString))
-            {
-                conexion.Open();
-                SqlCommand comando = conexion.CreateCommand();
-                comando.CommandType = CommandType.Text;
-                comando.CommandText = "SELECT COUNT(*) FROM " + TABLA + ";";
-                using (SqlDataReader reader = comando.ExecuteReader())
-                    while (reader.Read())
-                        ultimo = Convert.ToInt32(reader[0]);
-                conexion.Close();
-            }
-            return ultimo;
-        }
-        #endregion
 
         private void PoblarExistenciaMolde()
         {
@@ -375,26 +349,6 @@ namespace FiestasMexicanas
             num_PrecioVenta.Value = dPrecioTotal;
             costoGenerado = true;
         }
-
-        private void Select_tipo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            PoblarExistenciaMolde();
-            ObtenerPrecios();
-            select_tipo.BackColor = SystemColors.Window;
-            select_tipo.FlatStyle = FlatStyle.Standard;
-        }
-
-        private void Check_LlevaEstructuraAlambre_CheckedChanged(object sender, EventArgs e)
-        {
-            num_metrosAprox.Enabled = check_LlevaEstructuraAlambre.Checked;
-            num_metrosAprox.Value = 0;
-        }
-
-        private void Select_tamano_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            select_tamano.BackColor = SystemColors.Window;
-            select_tamano.FlatStyle = FlatStyle.Standard;
-
-        }
+        #endregion
     }
 }

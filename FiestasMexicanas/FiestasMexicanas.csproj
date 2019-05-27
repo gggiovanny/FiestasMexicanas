@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsMetodosSQL.cs" />
     <Compile Include="FiestasMexicanasDataSet.cs">
       <DependentUpon>FiestasMexicanasDataSet.xsd</DependentUpon>
     </Compile>
