@@ -43,6 +43,12 @@
             // 
             // dgrdCotizacion
             // 
+            this.dgrdCotizacion.AllowUserToAddRows = false;
+            this.dgrdCotizacion.AllowUserToDeleteRows = false;
+            this.dgrdCotizacion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgrdCotizacion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgrdCotizacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrdCotizacion.Location = new System.Drawing.Point(12, 204);
             this.dgrdCotizacion.Name = "dgrdCotizacion";

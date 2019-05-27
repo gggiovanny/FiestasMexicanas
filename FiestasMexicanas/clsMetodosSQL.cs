@@ -3,6 +3,8 @@ using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
 using System.Collections.Generic;
+using System.Drawing;
+
 
 namespace FiestasMexicanas
 {
@@ -46,9 +48,8 @@ namespace FiestasMexicanas
             return ultimo;
         }
 
-        public void PoblarDataGridView(DataGridView grid, string TABLA, params string[] CATALOGOS)
+        public List<string> ObtenerNombreCamposTabla(string TABLA)
         {
-
             List<string> lsCampos = new List<string>();
 
             using (SqlConnection conexion = new SqlConnection(sConnectionString))
@@ -60,15 +61,95 @@ namespace FiestasMexicanas
                 comando.CommandText = @"select c.name from sys.columns c
                                         inner join sys.tables t 
                                         on t.object_id = c.object_id
-                                        and t.name = '"+TABLA+"' and t.type = 'U';";
+                                        and t.name = '" + TABLA + "' and t.type = 'U';";
 
                 using (SqlDataReader reader = comando.ExecuteReader())
                 {
                     while (reader.Read())
                         lsCampos.Add(reader["name"].ToString());
                 }
+
+                if(lsCampos.Count == 0)
+                {
+                    comando.CommandText = @"select c.name from sys.columns c
+                                        inner join sys.views t 
+                                        on t.object_id = c.object_id
+                                        and t.name = '" + TABLA + "';";
+
+                    using (SqlDataReader reader = comando.ExecuteReader())
+                    {
+                        while (reader.Read())
+                            lsCampos.Add(reader["name"].ToString());
+                    }
+                }
                 conexion.Close();
             }
+
+            return lsCampos;
+        }
+
+        public void PoblarDataGridViewView(DataGridView grid, string TABLA, params clsCatalogo[] CATALOGOS)
+        {
+            List<string> lsCampos = ObtenerNombreCamposTabla(TABLA);
+
+            if (lsCampos.Count <= 1)
+            {
+                MessageBox.Show("Tabla inválida!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            int i = 0;
+            foreach (string campoNombre in lsCampos)
+            {
+                if (campoNombre.StartsWith("txt"))
+                {
+                    string nombreSinInicio = FormatearCampoNombre(campoNombre);
+                    DataGridViewTextBoxColumn tctxCampo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+                    tctxCampo.HeaderText = nombreSinInicio;
+                    tctxCampo.Name = "tc" + nombreSinInicio.Trim(' ');
+                    tctxCampo.DataPropertyName = campoNombre;
+                    grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+                    tctxCampo});
+                }
+                if (campoNombre.StartsWith("cmb"))
+                {
+                    string nombreSinInicio = FormatearCampoNombre(campoNombre);
+                    DataGridViewComboBoxColumn tcmbCampo = new DataGridViewComboBoxColumn();
+                    tcmbCampo.HeaderText = nombreSinInicio;
+                    tcmbCampo.Name = "tcmb" + nombreSinInicio.Trim(' ');
+                    tcmbCampo.DataPropertyName = campoNombre;
+
+                    tcmbCampo.FlatStyle = FlatStyle.Flat;
+                    tcmbCampo.DisplayStyle = DataGridViewComboBoxDisplayStyle.DropDownButton;
+
+                    tcmbCampo.ValueMember = CATALOGOS[i].prefijo + "Codigo";
+                    tcmbCampo.DisplayMember = CATALOGOS[i].prefijo + "Nombre";
+                    PoblarComboBoxTablaSQL(tcmbCampo, CATALOGOS[i].TABLA);
+                    i++;
+                    grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+                    tcmbCampo});
+                }
+                if (campoNombre.StartsWith("chk"))
+                {
+                    string nombreSinInicio = FormatearCampoNombre(campoNombre);
+                    DataGridViewCheckBoxColumn tctxCampo = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+                    tctxCampo.HeaderText = nombreSinInicio;
+                    tctxCampo.Name = "tchk" + nombreSinInicio.Trim(' ');
+                    tctxCampo.DataPropertyName = campoNombre;
+                    grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+                    tctxCampo});
+                }
+            }
+
+            PoblarTablaSQL(TABLA, grid);
+            grid.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.ColorTranslator.FromHtml("#F0F0F0");
+            grid.GridColor = System.Drawing.ColorTranslator.FromHtml("#F0F0F0");
+            grid.EnableHeadersVisualStyles = false;
+        }
+
+        public void PoblarDataGridViewTablaVanilla(DataGridView grid, string TABLA, params string[] CATALOGOS)
+        {
+            List<string> lsCampos = ObtenerNombreCamposTabla(TABLA);
 
             if(lsCampos.Count <= 1)
             {
@@ -77,7 +158,7 @@ namespace FiestasMexicanas
             }
 
             string inicioCampo = ObtenerInicioCampo(lsCampos[0]);
-            int c = 0;
+            int i = 0;
             foreach (string campoNombre in lsCampos)
             {
                 if(campoNombre.StartsWith(inicioCampo))
@@ -94,14 +175,20 @@ namespace FiestasMexicanas
                 {
                     string nombreSinInicio = FormatearCampoNombre(campoNombre);
                     DataGridViewComboBoxColumn tcmbCampo = new DataGridViewComboBoxColumn();
-                    tcmbCampo.HeaderText = nombreSinInicio;
+                    tcmbCampo.HeaderText = campoNombre;
                     tcmbCampo.Name = "tc" + nombreSinInicio;
                     tcmbCampo.DataPropertyName = campoNombre;
 
                     tcmbCampo.ValueMember = campoNombre;
                     tcmbCampo.DisplayMember =  ObtenerInicioCampo(campoNombre)+ "Nombre";
+                    PoblarComboBoxTablaSQL(tcmbCampo, CATALOGOS[i]);
+                    i++;
+                    grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+                    tcmbCampo});
                 }
             }
+
+            PoblarTablaSQL(TABLA, grid);
         }
 
         public void PoblarComboBoxTablaSQL(DataGridViewComboBoxColumn tcmbCampo, string CATALOGO)
@@ -142,8 +229,8 @@ namespace FiestasMexicanas
             return campoNombre.Remove(i);
         }
 
-        /*
-        public void PoblarTablaSQL()
+        
+        public void PoblarTablaSQL(string TABLA, DataGridView grid)
         {
 
             string sConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["FiestasMexicanas.Properties.Settings.FiestasMexicanasConnectionStringBueno"].ConnectionString;
@@ -152,15 +239,15 @@ namespace FiestasMexicanas
             {
                 conexion.Open();
 
-                SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM PEDIDO_PINATA;", conexion);
+                SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM " + TABLA + ";", conexion);
                 DataTable dbTabla = new DataTable();
                 adapter.Fill(dbTabla);
-                dataGridView1.DataSource = dbTabla;
+                grid.DataSource = dbTabla;
 
                 conexion.Close();
             }
 
-        }*/
+        }
 
     }
 }
