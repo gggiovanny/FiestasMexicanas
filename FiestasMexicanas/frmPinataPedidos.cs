@@ -21,6 +21,8 @@ namespace FiestasMexicanas
         {
             // TODO: This line of code loads data into the 'fiestasMexicanasDataSet.v_COTIZACIONES' table. You can move, or remove it, as needed.
             this.v_COTIZACIONESTableAdapter.Fill(this.fiestasMexicanasDataSet.v_COTIZACIONES);
+            // TODO: This line of code loads data into the 'fiestasMexicanasDataSet.v_COTIZACIONES' table. You can move, or remove it, as needed.
+            this.v_COTIZACIONESTableAdapter.Fill(this.fiestasMexicanasDataSet.v_COTIZACIONES);
 
         }
     }

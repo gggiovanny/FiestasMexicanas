@@ -15,8 +15,17 @@ namespace FiestasMexicanas
     {
         #region VARIABLES
         bool clienteNuevo = false;
+        bool costoGenerado = false;
+        decimal dPrecioUnitario = 0;
+
+        decimal dPrecioChica = 0;
+        decimal dPrecioMediana = 0;
+        decimal dPrecioGrande = 0;
+        decimal dExtraDetalle = 0;
+        decimal dAlambreMetro = 0;
         #endregion
 
+        #region CONSTRUCTOR
         public frmPinataCotizacion()
         {
             InitializeComponent();
@@ -26,6 +35,7 @@ namespace FiestasMexicanas
             PoblarComboBoxSQL(select_tamano, "CATALOGO_TAMANO_PINATA", "ctampNombre");
             PoblarComboBoxSQL(select_pais, "CATALOGO_PAISES", "cpaiNombre");
         }
+        #endregion
 
         #region EVENTOS
         private void lblTitulo_Click(object sender, EventArgs e)
@@ -40,30 +50,16 @@ namespace FiestasMexicanas
 
         private void Btn_guardarPedido_Click(object sender, EventArgs e)
         {
-            Guardar();
-        }
-
-
-        private void Txt_nombres_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            if (e.KeyCode == Keys.Tab || e.KeyCode == Keys.Enter)
+            if(!costoGenerado)
             {
-                if (sender.GetType() == typeof(TextBox))
-                {
-                    TextBox txt = sender as TextBox;
-                    int indicePersona = txt.AutoCompleteCustomSource.IndexOf(txt.Text.ToUpper());
-
-                    if (indicePersona >= 0)
-                    {
-                        clienteNuevo = false;
-                        SugerenciaAceptada(indicePersona);
-                    }
-                    else
-                    {
-                        clienteNuevo = true;
-                    }
-                }
+                MessageBox.Show(this, "Primero genere un costo para la piñata!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                btn_estimarCosto.BackColor = Color.Red;
+                return;
             }
+            if(Guardar() >= 1)
+                MessageBox.Show(this, "Pedido guardado exitosamente!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show(this, "Error al guardar!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void Select_pais_SelectedIndexChanged(object sender, EventArgs e)
@@ -108,17 +104,39 @@ namespace FiestasMexicanas
 
         private int Guardar()
         {
-            int result;
+            int result = -1;
+            
             string sConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["FiestasMexicanas.Properties.Settings.FiestasMexicanasConnectionStringBueno"].ConnectionString;
             using (SqlConnection conexion = new SqlConnection(sConnectionString))
             {
                 conexion.Open();
                 SqlCommand comando = conexion.CreateCommand();
                 comando.CommandType = CommandType.Text;
-
-                comando.CommandText = @"UPDATE CATALOGO_CLIENTES
-                                            SET cclieNombres = 'DIDIER JESUS'
-                                            WHERE cclieCodigo = 1;";
+                comando.CommandText = String.Format(@"INSERT INTO PEDIDO_PINATA
+                                        (
+	                                        ppedCodigo, 
+	                                        ctpinCodigo,
+	                                        ctampCodigo,
+	                                        ppedLlevaDetalle,
+	                                        ppedDescripcion,
+	                                        cclieCodigo, 
+	                                        ppedPrecioUnitario,
+	                                        ppedCantidad,
+	                                        ppedFechaPedido,
+	                                        ppedFechaEntregaProgramada
+                                        )
+                                        VALUES ( {0}, {1}, {2}, {3}, '{4}', {5}, {6}, {7}, CONVERT(date, '{8}'), CONVERT(date, '{9}') );",
+                                        ObtenerUltimoRegistroSQL("PEDIDO_PINATA") + 1,
+                                        select_tipo.SelectedIndex + 1,
+                                        select_tamano.SelectedIndex + 1,
+                                        radioBtn_detallada.Checked ? 1 : 0,
+                                        txt_descripcionPinata.Text,
+                                        txt_apellidos.AutoCompleteCustomSource.IndexOf(txt_apellidos.Text.ToUpper()) + 1,
+                                        num_PrecioVenta.Value,
+                                        dPrecioUnitario,
+                                        DateTime.Now,
+                                        dateFechaEntrega.Value
+                                        );
 
                 result = comando.ExecuteNonQuery();
                 conexion.Close();
@@ -182,7 +200,29 @@ namespace FiestasMexicanas
             }
         }
 
-        private void SugerenciaAceptada(int indicePersona)
+        private void Txt_AutoCompletadoLlenar(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.Tab || e.KeyCode == Keys.Enter)
+            {
+                if (sender.GetType() == typeof(TextBox))
+                {
+                    TextBox txt = sender as TextBox;
+                    int indicePersona = txt.AutoCompleteCustomSource.IndexOf(txt.Text);
+
+                    if (indicePersona >= 0)
+                    {
+                        clienteNuevo = false;
+                        AutoCompletadoSugerenciaAceptada(indicePersona);
+                    }
+                    else
+                    {
+                        clienteNuevo = true;
+                    }
+                }
+            }
+        }
+
+        private void AutoCompletadoSugerenciaAceptada(int indicePersona)
         {
             txt_nombres.Text = txt_nombres.AutoCompleteCustomSource[indicePersona];
             txt_apellidos.Text = txt_apellidos.AutoCompleteCustomSource[indicePersona];
@@ -195,8 +235,6 @@ namespace FiestasMexicanas
             select_pais.Text = select_pais.AutoCompleteCustomSource[indicePersona];
             select_estado.Text = select_estado.AutoCompleteCustomSource[indicePersona];
             select_ciudad.Text = select_ciudad.AutoCompleteCustomSource[indicePersona];
-
-
         }
 
         private void PoblarComboBoxSQL(ComboBox combobox, string TABLA, string campo, string WHERE = "")
@@ -219,6 +257,144 @@ namespace FiestasMexicanas
             }
 
         }
+
+        private int ObtenerUltimoRegistroSQL(string TABLA)
+        {
+            int ultimo = 0;
+
+            string sConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["FiestasMexicanas.Properties.Settings.FiestasMexicanasConnectionStringBueno"].ConnectionString;
+
+            using (SqlConnection conexion = new SqlConnection(sConnectionString))
+            {
+                conexion.Open();
+                SqlCommand comando = conexion.CreateCommand();
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = "SELECT COUNT(*) FROM " + TABLA + ";";
+                using (SqlDataReader reader = comando.ExecuteReader())
+                    while (reader.Read())
+                        ultimo = Convert.ToInt32(reader[0]);
+                conexion.Close();
+            }
+            return ultimo;
+        }
         #endregion
+
+        private void PoblarExistenciaMolde()
+        {
+
+            string sConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["FiestasMexicanas.Properties.Settings.FiestasMexicanasConnectionStringBueno"].ConnectionString;
+
+            using (SqlConnection conexion = new SqlConnection(sConnectionString))
+            {
+                conexion.Open();
+                SqlCommand comando = conexion.CreateCommand();
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = @"SELECT ppinExisteMolde FROM PRECIO_PINATA WHERE ctpinCodigo = " + (select_tipo.Items.IndexOf(select_tipo.SelectedItem) + 1);
+                using (SqlDataReader reader = comando.ExecuteReader())
+                {
+                    while (reader.Read())
+                        check_existeMolde.Checked = Convert.ToBoolean(reader["ppinExisteMolde"]);
+                }
+                conexion.Close();
+            }
+
+        }
+
+        private void Btn_estimarCosto_Click(object sender, EventArgs e)
+        {
+            if (select_tipo.SelectedIndex < 0)
+            {
+                MessageBox.Show(this, "Ingrese primero un tipo de piñata!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                select_tipo.BackColor = Color.Red;
+                select_tipo.FlatStyle = FlatStyle.Flat;
+                return;
+            }
+            if (select_tamano.SelectedIndex < 0)
+            {
+                MessageBox.Show(this, "Ingrese primero un tamaño de piñata!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                select_tamano.BackColor = Color.Red;
+                select_tamano.FlatStyle = FlatStyle.Flat;
+                return;
+            }
+
+            EstimarCosto();
+            btn_estimarCosto.BackColor = SystemColors.Control;
+        }
+
+        private void ObtenerPrecios()
+        {
+            string sConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["FiestasMexicanas.Properties.Settings.FiestasMexicanasConnectionStringBueno"].ConnectionString;
+
+            using (SqlConnection conexion = new SqlConnection(sConnectionString))
+            {
+                conexion.Open();
+                SqlCommand comando = conexion.CreateCommand();
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = @"SELECT * FROM PRECIO_PINATA WHERE ctpinCodigo = " + (select_tipo.Items.IndexOf(select_tipo.SelectedItem) + 1);
+                using (SqlDataReader reader = comando.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        dPrecioChica = Convert.ToDecimal(reader ["ppinChica"]);
+                        dPrecioMediana = Convert.ToDecimal(reader["ppinMediana"]);
+                        dPrecioGrande = Convert.ToDecimal(reader["ppinGrande"]);
+
+                        dExtraDetalle = Convert.ToDecimal(reader["ppinDetalle"]);
+                        dAlambreMetro = Convert.ToDecimal(reader["ppinAlambreMetro"]);
+                    }
+                }
+                conexion.Close();
+            }
+        }
+
+        private void EstimarCosto()
+        {
+            decimal dPrecioBase = 0;
+            switch (select_tamano.Items.IndexOf(select_tamano.SelectedItem) + 1)
+            {
+                case 1:
+                    dPrecioBase = dPrecioChica;
+                    break;
+                case 2:
+                    dPrecioBase = dPrecioMediana;
+                    break;
+                case 3:
+                    dPrecioBase = dPrecioGrande;
+                    break;
+                default:
+                    break;
+            }
+
+            dPrecioUnitario = dPrecioBase;
+            dPrecioUnitario += radioBtn_detallada.Checked ? dExtraDetalle : 0;
+
+            dPrecioUnitario += dAlambreMetro * num_metrosAprox.Value;
+
+            decimal dPrecioTotal = dPrecioUnitario * num_cantidad.Value;
+
+            num_PrecioVenta.Value = dPrecioTotal;
+            costoGenerado = true;
+        }
+
+        private void Select_tipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            PoblarExistenciaMolde();
+            ObtenerPrecios();
+            select_tipo.BackColor = SystemColors.Window;
+            select_tipo.FlatStyle = FlatStyle.Standard;
+        }
+
+        private void Check_LlevaEstructuraAlambre_CheckedChanged(object sender, EventArgs e)
+        {
+            num_metrosAprox.Enabled = check_LlevaEstructuraAlambre.Checked;
+            num_metrosAprox.Value = 0;
+        }
+
+        private void Select_tamano_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            select_tamano.BackColor = SystemColors.Window;
+            select_tamano.FlatStyle = FlatStyle.Standard;
+
+        }
     }
 }

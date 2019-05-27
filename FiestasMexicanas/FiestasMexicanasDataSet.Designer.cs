@@ -7266,13 +7266,15 @@ namespace FiestasMexicanas {
             
             private global::System.Data.DataColumn columnDescripcion;
             
-            private global::System.Data.DataColumn columnCLIENTE;
+            private global::System.Data.DataColumn columnCliente;
             
             private global::System.Data.DataColumn columnCANTIDAD;
             
             private global::System.Data.DataColumn columnImporte_venta;
             
             private global::System.Data.DataColumn columnEntregado;
+            
+            private global::System.Data.DataColumn columnPrecio_unitario;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -7357,9 +7359,9 @@ namespace FiestasMexicanas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn CLIENTEColumn {
+            public global::System.Data.DataColumn ClienteColumn {
                 get {
-                    return this.columnCLIENTE;
+                    return this.columnCliente;
                 }
             }
             
@@ -7384,6 +7386,14 @@ namespace FiestasMexicanas {
             public global::System.Data.DataColumn EntregadoColumn {
                 get {
                     return this.columnEntregado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Precio_unitarioColumn {
+                get {
+                    return this.columnPrecio_unitario;
                 }
             }
             
@@ -7424,7 +7434,7 @@ namespace FiestasMexicanas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public v_COTIZACIONESRow Addv_COTIZACIONESRow(int Codigo, string Tipo, string Tamaño, bool Detalle, bool Hay_molde, string Descripcion, string CLIENTE, int CANTIDAD, string Importe_venta, int Entregado) {
+            public v_COTIZACIONESRow Addv_COTIZACIONESRow(int Codigo, string Tipo, string Tamaño, bool Detalle, bool Hay_molde, string Descripcion, string Cliente, int CANTIDAD, string Importe_venta, int Entregado, string Precio_unitario) {
                 v_COTIZACIONESRow rowv_COTIZACIONESRow = ((v_COTIZACIONESRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Codigo,
@@ -7433,10 +7443,11 @@ namespace FiestasMexicanas {
                         Detalle,
                         Hay_molde,
                         Descripcion,
-                        CLIENTE,
+                        Cliente,
                         CANTIDAD,
                         Importe_venta,
-                        Entregado};
+                        Entregado,
+                        Precio_unitario};
                 rowv_COTIZACIONESRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowv_COTIZACIONESRow);
                 return rowv_COTIZACIONESRow;
@@ -7472,10 +7483,11 @@ namespace FiestasMexicanas {
                 this.columnDetalle = base.Columns["Detalle"];
                 this.columnHay_molde = base.Columns["Hay molde"];
                 this.columnDescripcion = base.Columns["Descripcion"];
-                this.columnCLIENTE = base.Columns["CLIENTE"];
+                this.columnCliente = base.Columns["Cliente"];
                 this.columnCANTIDAD = base.Columns["CANTIDAD"];
                 this.columnImporte_venta = base.Columns["Importe venta"];
                 this.columnEntregado = base.Columns["Entregado"];
+                this.columnPrecio_unitario = base.Columns["Precio unitario"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7493,14 +7505,16 @@ namespace FiestasMexicanas {
                 base.Columns.Add(this.columnHay_molde);
                 this.columnDescripcion = new global::System.Data.DataColumn("Descripcion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDescripcion);
-                this.columnCLIENTE = new global::System.Data.DataColumn("CLIENTE", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCLIENTE);
+                this.columnCliente = new global::System.Data.DataColumn("Cliente", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCliente);
                 this.columnCANTIDAD = new global::System.Data.DataColumn("CANTIDAD", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCANTIDAD);
                 this.columnImporte_venta = new global::System.Data.DataColumn("Importe venta", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnImporte_venta);
                 this.columnEntregado = new global::System.Data.DataColumn("Entregado", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEntregado);
+                this.columnPrecio_unitario = new global::System.Data.DataColumn("Precio unitario", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPrecio_unitario);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCodigo}, true));
                 this.columnCodigo.AllowDBNull = false;
@@ -7508,11 +7522,13 @@ namespace FiestasMexicanas {
                 this.columnTipo.MaxLength = 30;
                 this.columnTamaño.MaxLength = 20;
                 this.columnDescripcion.MaxLength = 300;
-                this.columnCLIENTE.ReadOnly = true;
-                this.columnCLIENTE.MaxLength = 182;
+                this.columnCliente.ReadOnly = true;
+                this.columnCliente.MaxLength = 182;
                 this.columnImporte_venta.ReadOnly = true;
                 this.columnImporte_venta.MaxLength = 4000;
                 this.columnEntregado.ReadOnly = true;
+                this.columnPrecio_unitario.ReadOnly = true;
+                this.columnPrecio_unitario.MaxLength = 4000;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12567,17 +12583,17 @@ namespace FiestasMexicanas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string CLIENTE {
+            public string Cliente {
                 get {
                     try {
-                        return ((string)(this[this.tablev_COTIZACIONES.CLIENTEColumn]));
+                        return ((string)(this[this.tablev_COTIZACIONES.ClienteColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CLIENTE\' in table \'v_COTIZACIONES\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Cliente\' in table \'v_COTIZACIONES\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablev_COTIZACIONES.CLIENTEColumn] = value;
+                    this[this.tablev_COTIZACIONES.ClienteColumn] = value;
                 }
             }
             
@@ -12626,6 +12642,22 @@ namespace FiestasMexicanas {
                 }
                 set {
                     this[this.tablev_COTIZACIONES.EntregadoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Precio_unitario {
+                get {
+                    try {
+                        return ((string)(this[this.tablev_COTIZACIONES.Precio_unitarioColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Precio unitario\' in table \'v_COTIZACIONES\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablev_COTIZACIONES.Precio_unitarioColumn] = value;
                 }
             }
             
@@ -12691,14 +12723,14 @@ namespace FiestasMexicanas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCLIENTENull() {
-                return this.IsNull(this.tablev_COTIZACIONES.CLIENTEColumn);
+            public bool IsClienteNull() {
+                return this.IsNull(this.tablev_COTIZACIONES.ClienteColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCLIENTENull() {
-                this[this.tablev_COTIZACIONES.CLIENTEColumn] = global::System.Convert.DBNull;
+            public void SetClienteNull() {
+                this[this.tablev_COTIZACIONES.ClienteColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12735,6 +12767,18 @@ namespace FiestasMexicanas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetEntregadoNull() {
                 this[this.tablev_COTIZACIONES.EntregadoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPrecio_unitarioNull() {
+                return this.IsNull(this.tablev_COTIZACIONES.Precio_unitarioColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPrecio_unitarioNull() {
+                this[this.tablev_COTIZACIONES.Precio_unitarioColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -22051,10 +22095,12 @@ SELECT usisCodigo, cempCodigo, usisAlias, usisPassword FROM USUARIOS_SISTEMA WHE
             tableMapping.ColumnMappings.Add("Detalle", "Detalle");
             tableMapping.ColumnMappings.Add("Hay molde", "Hay molde");
             tableMapping.ColumnMappings.Add("Descripcion", "Descripcion");
-            tableMapping.ColumnMappings.Add("CLIENTE", "CLIENTE");
-            tableMapping.ColumnMappings.Add("CANTIDAD", "CANTIDAD");
             tableMapping.ColumnMappings.Add("Importe venta", "Importe venta");
             tableMapping.ColumnMappings.Add("Entregado", "Entregado");
+            tableMapping.ColumnMappings.Add("Cantidad", "Cantidad");
+            tableMapping.ColumnMappings.Add("Precio unitario", "Precio unitario");
+            tableMapping.ColumnMappings.Add("CANTIDAD", "CANTIDAD");
+            tableMapping.ColumnMappings.Add("Cliente", "Cliente");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -22071,7 +22117,7 @@ SELECT usisCodigo, cempCodigo, usisAlias, usisPassword FROM USUARIOS_SISTEMA WHE
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT * FROM dbo.v_COTIZACIONES";
+            this._commandCollection[0].CommandText = "SELECT * FROM v_COTIZACIONES";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
