@@ -247,6 +247,9 @@ namespace FiestasMexicanas
                 conexion.Close();
             }
 
+            grid.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.ColorTranslator.FromHtml("#F0F0F0");
+            grid.GridColor = System.Drawing.ColorTranslator.FromHtml("#F0F0F0");
+            grid.EnableHeadersVisualStyles = false;
         }
 
     }
