@@ -22,7 +22,11 @@ namespace FiestasMexicanas
 
         private void Pruebas_Load_1(object sender, EventArgs e)
         {
-            sql.PoblarDataGridViewView(dgrdCotizacion, "v_COTIZACIONES", new clsCatalogo("CATALOGO_TIPO_PINATA", "ctpin"), new clsCatalogo("CATALOGO_TAMANO_PINATA", "ctamp"), new clsCatalogo("v_CATALOGO_CLIENTES", "cclie"));
+            sql.PoblarDataGridViewView(dgrdCotizacion, "v_COTIZACIONES", 
+                DataGridViewComboBoxDisplayStyle.ComboBox,
+                new clsCatalogo("CATALOGO_TIPO_PINATA", "ctpin"), 
+                new clsCatalogo("CATALOGO_TAMANO_PINATA", "ctamp"), 
+                new clsCatalogo("v_CATALOGO_CLIENTES", "cclie"));
         }
 
         

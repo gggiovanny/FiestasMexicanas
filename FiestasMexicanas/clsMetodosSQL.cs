@@ -88,7 +88,7 @@ namespace FiestasMexicanas
             return lsCampos;
         }
 
-        public void PoblarDataGridViewView(DataGridView grid, string TABLA, params clsCatalogo[] CATALOGOS)
+        public void PoblarDataGridViewView(DataGridView grid, string TABLA, DataGridViewComboBoxDisplayStyle cmbStyle = DataGridViewComboBoxDisplayStyle.ComboBox, params clsCatalogo[] CATALOGOS)
         {
             List<string> lsCampos = ObtenerNombreCamposTabla(TABLA);
 
@@ -106,7 +106,7 @@ namespace FiestasMexicanas
                     string nombreSinInicio = FormatearCampoNombre(campoNombre);
                     DataGridViewTextBoxColumn tctxCampo = new System.Windows.Forms.DataGridViewTextBoxColumn();
                     tctxCampo.HeaderText = nombreSinInicio;
-                    tctxCampo.Name = "tc" + nombreSinInicio.Trim(' ');
+                    tctxCampo.Name = nombreSinInicio.Trim(' ');
                     tctxCampo.DataPropertyName = campoNombre;
                     grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
                     tctxCampo});
@@ -116,11 +116,11 @@ namespace FiestasMexicanas
                     string nombreSinInicio = FormatearCampoNombre(campoNombre);
                     DataGridViewComboBoxColumn tcmbCampo = new DataGridViewComboBoxColumn();
                     tcmbCampo.HeaderText = nombreSinInicio;
-                    tcmbCampo.Name = "tcmb" + nombreSinInicio.Trim(' ');
+                    tcmbCampo.Name = nombreSinInicio.Trim(' ');
                     tcmbCampo.DataPropertyName = campoNombre;
 
                     tcmbCampo.FlatStyle = FlatStyle.Flat;
-                    tcmbCampo.DisplayStyle = DataGridViewComboBoxDisplayStyle.DropDownButton;
+                    tcmbCampo.DisplayStyle = cmbStyle;
 
                     tcmbCampo.ValueMember = CATALOGOS[i].prefijo + "Codigo";
                     tcmbCampo.DisplayMember = CATALOGOS[i].prefijo + "Nombre";
@@ -134,7 +134,7 @@ namespace FiestasMexicanas
                     string nombreSinInicio = FormatearCampoNombre(campoNombre);
                     DataGridViewCheckBoxColumn tctxCampo = new System.Windows.Forms.DataGridViewCheckBoxColumn();
                     tctxCampo.HeaderText = nombreSinInicio;
-                    tctxCampo.Name = "tchk" + nombreSinInicio.Trim(' ');
+                    tctxCampo.Name = nombreSinInicio.Trim(' ');
                     tctxCampo.DataPropertyName = campoNombre;
                     grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
                     tctxCampo});
