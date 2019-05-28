@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_razonsocial = new System.Windows.Forms.TextBox();
+            this.txt_razonSocial = new System.Windows.Forms.TextBox();
             this.txt_codigo = new System.Windows.Forms.TextBox();
             this.btn_buscar = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
@@ -53,37 +52,19 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_nombres = new System.Windows.Forms.TextBox();
-            this.fiestasMexicanasDataSet = new FiestasMexicanas.FiestasMexicanasDataSet();
-            this.v_CLIENTESBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.v_CLIENTESTableAdapter = new FiestasMexicanas.FiestasMexicanasDataSetTableAdapters.v_CLIENTESTableAdapter();
-            this.tableAdapterManager = new FiestasMexicanas.FiestasMexicanasDataSetTableAdapters.TableAdapterManager();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.v_CLIENTESDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.catalogO_CIUDADESTableAdapter1 = new FiestasMexicanas.FiestasMexicanasDataSetTableAdapters.CATALOGO_CIUDADESTableAdapter();
-            this.cATALOGOESTADOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cATALOGO_ESTADOSTableAdapter = new FiestasMexicanas.FiestasMexicanasDataSetTableAdapters.CATALOGO_ESTADOSTableAdapter();
+            this.grdClientes = new System.Windows.Forms.DataGridView();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fiestasMexicanasDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.v_CLIENTESBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.v_CLIENTESDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cATALOGOESTADOSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.label1);
-            this.groupBox4.Controls.Add(this.txt_razonsocial);
+            this.groupBox4.Controls.Add(this.txt_razonSocial);
             this.groupBox4.Controls.Add(this.txt_codigo);
             this.groupBox4.Controls.Add(this.btn_buscar);
             this.groupBox4.Controls.Add(this.label15);
@@ -107,7 +88,7 @@
             this.groupBox4.Controls.Add(this.txt_nombres);
             this.groupBox4.Location = new System.Drawing.Point(12, 56);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(898, 224);
+            this.groupBox4.Size = new System.Drawing.Size(1101, 224);
             this.groupBox4.TabIndex = 32;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Filtros";
@@ -121,15 +102,20 @@
             this.label1.TabIndex = 34;
             this.label1.Text = "Codigo";
             // 
-            // txt_razonsocial
+            // txt_razonSocial
             // 
-            this.txt_razonsocial.Location = new System.Drawing.Point(78, 75);
-            this.txt_razonsocial.Name = "txt_razonsocial";
-            this.txt_razonsocial.Size = new System.Drawing.Size(404, 20);
-            this.txt_razonsocial.TabIndex = 34;
+            this.txt_razonSocial.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txt_razonSocial.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txt_razonSocial.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_razonSocial.Location = new System.Drawing.Point(78, 75);
+            this.txt_razonSocial.Name = "txt_razonSocial";
+            this.txt_razonSocial.Size = new System.Drawing.Size(404, 20);
+            this.txt_razonSocial.TabIndex = 34;
             // 
             // txt_codigo
             // 
+            this.txt_codigo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txt_codigo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txt_codigo.Location = new System.Drawing.Point(78, 19);
             this.txt_codigo.Name = "txt_codigo";
             this.txt_codigo.Size = new System.Drawing.Size(117, 20);
@@ -159,7 +145,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(358, 130);
+            this.label12.Location = new System.Drawing.Point(43, 130);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(29, 13);
             this.label12.TabIndex = 29;
@@ -168,10 +154,11 @@
             // select_pais
             // 
             this.select_pais.FormattingEnabled = true;
-            this.select_pais.Location = new System.Drawing.Point(393, 127);
+            this.select_pais.Location = new System.Drawing.Point(78, 127);
             this.select_pais.Name = "select_pais";
             this.select_pais.Size = new System.Drawing.Size(89, 21);
             this.select_pais.TabIndex = 28;
+            this.select_pais.SelectedIndexChanged += new System.EventHandler(this.Select_pais_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -184,21 +171,18 @@
             // 
             // select_estado
             // 
-            this.select_estado.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.v_CLIENTESBindingSource, "ESTADO", true));
-            this.select_estado.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.cATALOGOESTADOSBindingSource, "cedoNombre", true));
-            this.select_estado.DataSource = this.cATALOGOESTADOSBindingSource;
-            this.select_estado.DisplayMember = "cedoNombre";
             this.select_estado.FormattingEnabled = true;
             this.select_estado.Location = new System.Drawing.Point(245, 127);
             this.select_estado.Name = "select_estado";
             this.select_estado.Size = new System.Drawing.Size(89, 21);
             this.select_estado.TabIndex = 26;
             this.select_estado.ValueMember = "cedoNombre";
+            this.select_estado.SelectedIndexChanged += new System.EventHandler(this.Select_estado_SelectedIndexChanged);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(32, 130);
+            this.label10.Location = new System.Drawing.Point(347, 130);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(40, 13);
             this.label10.TabIndex = 25;
@@ -207,7 +191,7 @@
             // select_ciudad
             // 
             this.select_ciudad.FormattingEnabled = true;
-            this.select_ciudad.Location = new System.Drawing.Point(78, 127);
+            this.select_ciudad.Location = new System.Drawing.Point(393, 127);
             this.select_ciudad.Name = "select_ciudad";
             this.select_ciudad.Size = new System.Drawing.Size(89, 21);
             this.select_ciudad.TabIndex = 24;
@@ -223,6 +207,9 @@
             // 
             // txt_cel
             // 
+            this.txt_cel.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txt_cel.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txt_cel.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_cel.Location = new System.Drawing.Point(245, 154);
             this.txt_cel.Name = "txt_cel";
             this.txt_cel.Size = new System.Drawing.Size(117, 20);
@@ -248,6 +235,8 @@
             // 
             // txt_email
             // 
+            this.txt_email.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txt_email.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txt_email.Location = new System.Drawing.Point(78, 180);
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(176, 20);
@@ -255,6 +244,9 @@
             // 
             // txt_tel
             // 
+            this.txt_tel.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txt_tel.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txt_tel.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_tel.Location = new System.Drawing.Point(78, 154);
             this.txt_tel.Name = "txt_tel";
             this.txt_tel.Size = new System.Drawing.Size(117, 20);
@@ -271,6 +263,9 @@
             // 
             // txt_direccion
             // 
+            this.txt_direccion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txt_direccion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txt_direccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_direccion.Location = new System.Drawing.Point(78, 101);
             this.txt_direccion.Name = "txt_direccion";
             this.txt_direccion.Size = new System.Drawing.Size(404, 20);
@@ -278,6 +273,9 @@
             // 
             // txt_apellidos
             // 
+            this.txt_apellidos.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txt_apellidos.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txt_apellidos.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_apellidos.Location = new System.Drawing.Point(258, 49);
             this.txt_apellidos.Name = "txt_apellidos";
             this.txt_apellidos.Size = new System.Drawing.Size(224, 20);
@@ -303,195 +301,50 @@
             // 
             // txt_nombres
             // 
+            this.txt_nombres.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txt_nombres.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txt_nombres.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_nombres.Location = new System.Drawing.Point(78, 49);
             this.txt_nombres.Name = "txt_nombres";
             this.txt_nombres.Size = new System.Drawing.Size(117, 20);
             this.txt_nombres.TabIndex = 13;
             // 
-            // fiestasMexicanasDataSet
-            // 
-            this.fiestasMexicanasDataSet.DataSetName = "FiestasMexicanasDataSet";
-            this.fiestasMexicanasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // v_CLIENTESBindingSource
-            // 
-            this.v_CLIENTESBindingSource.DataMember = "v_CLIENTES";
-            this.v_CLIENTESBindingSource.DataSource = this.fiestasMexicanasDataSet;
-            // 
-            // v_CLIENTESTableAdapter
-            // 
-            this.v_CLIENTESTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.ARTESANOS_PEDIDOSTableAdapter = null;
-            this.tableAdapterManager.ARTESANOSTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CATALOGO_CIUDADESTableAdapter = null;
-            this.tableAdapterManager.CATALOGO_CLIENTESTableAdapter = null;
-            this.tableAdapterManager.CATALOGO_EMPLEADOS_PUESTOSTableAdapter = null;
-            this.tableAdapterManager.CATALOGO_EMPLEADOSTableAdapter = null;
-            this.tableAdapterManager.CATALOGO_ESTADOSTableAdapter = null;
-            this.tableAdapterManager.CATALOGO_PAISESTableAdapter = null;
-            this.tableAdapterManager.CATALOGO_PEDIDO_ESTATUSTableAdapter = null;
-            this.tableAdapterManager.CATALOGO_PROVEEDORESTableAdapter = null;
-            this.tableAdapterManager.CATALOGO_TAMANO_PINATATableAdapter = null;
-            this.tableAdapterManager.CATALOGO_TIPO_PINATATableAdapter = null;
-            this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.PEDIDO_PINATATableAdapter = null;
-            this.tableAdapterManager.PRECIO_PINATATableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = FiestasMexicanas.FiestasMexicanasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.USUARIOS_SISTEMATableAdapter = null;
-            // 
             // lblTitulo
             // 
-            this.lblTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(6, 9);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(907, 44);
+            this.lblTitulo.Size = new System.Drawing.Size(1110, 44);
             this.lblTitulo.TabIndex = 30;
             this.lblTitulo.Text = "Clientes";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // v_CLIENTESDataGridView
-            // 
-            this.v_CLIENTESDataGridView.AllowUserToAddRows = false;
-            this.v_CLIENTESDataGridView.AllowUserToDeleteRows = false;
-            this.v_CLIENTESDataGridView.AllowUserToOrderColumns = true;
-            this.v_CLIENTESDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.v_CLIENTESDataGridView.AutoGenerateColumns = false;
-            this.v_CLIENTESDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.v_CLIENTESDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.v_CLIENTESDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10});
-            this.v_CLIENTESDataGridView.DataSource = this.v_CLIENTESBindingSource;
-            this.v_CLIENTESDataGridView.Location = new System.Drawing.Point(12, 286);
-            this.v_CLIENTESDataGridView.Name = "v_CLIENTESDataGridView";
-            this.v_CLIENTESDataGridView.ReadOnly = true;
-            this.v_CLIENTESDataGridView.Size = new System.Drawing.Size(901, 272);
-            this.v_CLIENTESDataGridView.TabIndex = 32;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 43;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "NOMBRE";
-            this.dataGridViewTextBoxColumn2.HeaderText = "NOMBRE";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 79;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "APELLIDOS";
-            this.dataGridViewTextBoxColumn3.HeaderText = "APELLIDOS";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 91;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "RAZON SOCIAL";
-            this.dataGridViewTextBoxColumn11.HeaderText = "RAZON SOCIAL";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            this.dataGridViewTextBoxColumn11.Width = 102;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "DIRECCION";
-            this.dataGridViewTextBoxColumn4.HeaderText = "DIRECCION";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 91;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "EMAIL";
-            this.dataGridViewTextBoxColumn5.HeaderText = "EMAIL";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 64;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "PAIS";
-            this.dataGridViewTextBoxColumn6.HeaderText = "PAIS";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 56;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "ESTADO";
-            this.dataGridViewTextBoxColumn7.HeaderText = "ESTADO";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Width = 76;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "CIUDAD";
-            this.dataGridViewTextBoxColumn8.HeaderText = "CIUDAD";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Width = 73;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "TEL";
-            this.dataGridViewTextBoxColumn9.HeaderText = "TEL";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            this.dataGridViewTextBoxColumn9.Width = 52;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "CEL";
-            this.dataGridViewTextBoxColumn10.HeaderText = "CEL";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            this.dataGridViewTextBoxColumn10.Width = 52;
-            // 
-            // catalogO_CIUDADESTableAdapter1
-            // 
-            this.catalogO_CIUDADESTableAdapter1.ClearBeforeFill = true;
-            // 
-            // cATALOGOESTADOSBindingSource
-            // 
-            this.cATALOGOESTADOSBindingSource.DataMember = "CATALOGO_ESTADOS";
-            this.cATALOGOESTADOSBindingSource.DataSource = this.fiestasMexicanasDataSet;
             // 
             // cATALOGO_ESTADOSTableAdapter
             // 
             this.cATALOGO_ESTADOSTableAdapter.ClearBeforeFill = true;
             // 
+            // grdClientes
+            // 
+            this.grdClientes.AllowUserToAddRows = false;
+            this.grdClientes.AllowUserToDeleteRows = false;
+            this.grdClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.grdClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdClientes.Location = new System.Drawing.Point(12, 286);
+            this.grdClientes.Name = "grdClientes";
+            this.grdClientes.Size = new System.Drawing.Size(1101, 272);
+            this.grdClientes.TabIndex = 35;
+            // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(925, 570);
-            this.Controls.Add(this.v_CLIENTESDataGridView);
+            this.ClientSize = new System.Drawing.Size(1128, 570);
+            this.Controls.Add(this.grdClientes);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.lblTitulo);
             this.Name = "frmClientes";
@@ -499,10 +352,7 @@
             this.Load += new System.EventHandler(this.FrmClientes_Load);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fiestasMexicanasDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.v_CLIENTESBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.v_CLIENTESDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cATALOGOESTADOSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdClientes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -531,26 +381,9 @@
         private System.Windows.Forms.TextBox txt_nombres;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_codigo;
-        private FiestasMexicanasDataSet fiestasMexicanasDataSet;
-        private System.Windows.Forms.BindingSource v_CLIENTESBindingSource;
-        private FiestasMexicanasDataSetTableAdapters.v_CLIENTESTableAdapter v_CLIENTESTableAdapter;
-        private FiestasMexicanasDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.DataGridView v_CLIENTESDataGridView;
-        private System.Windows.Forms.TextBox txt_razonsocial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private FiestasMexicanasDataSetTableAdapters.CATALOGO_CIUDADESTableAdapter catalogO_CIUDADESTableAdapter1;
-        private System.Windows.Forms.BindingSource cATALOGOESTADOSBindingSource;
+        private System.Windows.Forms.TextBox txt_razonSocial;
         private FiestasMexicanasDataSetTableAdapters.CATALOGO_ESTADOSTableAdapter cATALOGO_ESTADOSTableAdapter;
+        private System.Windows.Forms.DataGridView grdClientes;
     }
 }
