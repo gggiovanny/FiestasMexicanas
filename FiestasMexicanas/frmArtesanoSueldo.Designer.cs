@@ -33,6 +33,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.select_semana = new System.Windows.Forms.ComboBox();
+            this.grdArtesanos = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.grdArtesanos)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -88,11 +90,26 @@
             this.select_semana.Size = new System.Drawing.Size(64, 21);
             this.select_semana.TabIndex = 32;
             // 
+            // grdArtesanos
+            // 
+            this.grdArtesanos.AllowUserToAddRows = false;
+            this.grdArtesanos.AllowUserToDeleteRows = false;
+            this.grdArtesanos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdArtesanos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.grdArtesanos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdArtesanos.Location = new System.Drawing.Point(12, 126);
+            this.grdArtesanos.Name = "grdArtesanos";
+            this.grdArtesanos.Size = new System.Drawing.Size(865, 316);
+            this.grdArtesanos.TabIndex = 34;
+            // 
             // frmArtesanoSueldo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(889, 454);
+            this.Controls.Add(this.grdArtesanos);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.select_semana);
             this.Controls.Add(this.label2);
@@ -100,6 +117,8 @@
             this.Controls.Add(this.lblTitulo);
             this.Name = "frmArtesanoSueldo";
             this.Text = "Artesanos";
+            this.Load += new System.EventHandler(this.FrmArtesanoSueldo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.grdArtesanos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,5 +131,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox select_semana;
+        private System.Windows.Forms.DataGridView grdArtesanos;
     }
 }

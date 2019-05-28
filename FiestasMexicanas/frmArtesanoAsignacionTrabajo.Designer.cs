@@ -117,6 +117,7 @@
             this.grdArtesanos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdArtesanos.Location = new System.Drawing.Point(12, 126);
             this.grdArtesanos.Name = "grdArtesanos";
+            this.grdArtesanos.ReadOnly = true;
             this.grdArtesanos.Size = new System.Drawing.Size(523, 411);
             this.grdArtesanos.TabIndex = 10;
             // 
@@ -131,6 +132,7 @@
             this.grdPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdPedidos.Location = new System.Drawing.Point(618, 126);
             this.grdPedidos.Name = "grdPedidos";
+            this.grdPedidos.ReadOnly = true;
             this.grdPedidos.Size = new System.Drawing.Size(838, 411);
             this.grdPedidos.TabIndex = 11;
             // 
