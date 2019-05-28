@@ -28,17 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btn_guardarPrecios = new System.Windows.Forms.Button();
-            this.fiestasMexicanasDataSet = new FiestasMexicanas.FiestasMexicanasDataSet();
-            this.v_PRECIO_PINATABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.v_PRECIO_PINATATableAdapter = new FiestasMexicanas.FiestasMexicanasDataSetTableAdapters.v_PRECIO_PINATATableAdapter();
-            this.tableAdapterManager = new FiestasMexicanas.FiestasMexicanasDataSetTableAdapters.TableAdapterManager();
-            this.dgrdCotizacion = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.fiestasMexicanasDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.v_PRECIO_PINATABindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgrdCotizacion)).BeginInit();
+            this.grdPrecios = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.grdPrecios)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -62,70 +55,35 @@
             this.btn_guardarPrecios.TabIndex = 5;
             this.btn_guardarPrecios.Text = "Guardar";
             this.btn_guardarPrecios.UseVisualStyleBackColor = true;
+            this.btn_guardarPrecios.Click += new System.EventHandler(this.Btn_guardarPrecios_Click);
             // 
-            // fiestasMexicanasDataSet
+            // grdPrecios
             // 
-            this.fiestasMexicanasDataSet.DataSetName = "FiestasMexicanasDataSet";
-            this.fiestasMexicanasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // v_PRECIO_PINATABindingSource
-            // 
-            this.v_PRECIO_PINATABindingSource.DataMember = "v_PRECIO_PINATA";
-            this.v_PRECIO_PINATABindingSource.DataSource = this.fiestasMexicanasDataSet;
-            // 
-            // v_PRECIO_PINATATableAdapter
-            // 
-            this.v_PRECIO_PINATATableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.ARTESANOS_PEDIDOSTableAdapter = null;
-            this.tableAdapterManager.ARTESANOSTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CATALOGO_CIUDADESTableAdapter = null;
-            this.tableAdapterManager.CATALOGO_CLIENTESTableAdapter = null;
-            this.tableAdapterManager.CATALOGO_EMPLEADOS_PUESTOSTableAdapter = null;
-            this.tableAdapterManager.CATALOGO_EMPLEADOSTableAdapter = null;
-            this.tableAdapterManager.CATALOGO_ESTADOSTableAdapter = null;
-            this.tableAdapterManager.CATALOGO_PAISESTableAdapter = null;
-            this.tableAdapterManager.CATALOGO_PEDIDO_ESTATUSTableAdapter = null;
-            this.tableAdapterManager.CATALOGO_PROVEEDORESTableAdapter = null;
-            this.tableAdapterManager.CATALOGO_TAMANO_PINATATableAdapter = null;
-            this.tableAdapterManager.CATALOGO_TIPO_PINATATableAdapter = null;
-            this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.PEDIDO_PINATATableAdapter = null;
-            this.tableAdapterManager.PRECIO_PINATATableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = FiestasMexicanas.FiestasMexicanasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.USUARIOS_SISTEMATableAdapter = null;
-            // 
-            // dgrdCotizacion
-            // 
-            this.dgrdCotizacion.AllowUserToAddRows = false;
-            this.dgrdCotizacion.AllowUserToDeleteRows = false;
-            this.dgrdCotizacion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.grdPrecios.AllowUserToAddRows = false;
+            this.grdPrecios.AllowUserToDeleteRows = false;
+            this.grdPrecios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgrdCotizacion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgrdCotizacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrdCotizacion.Location = new System.Drawing.Point(12, 111);
-            this.dgrdCotizacion.Name = "dgrdCotizacion";
-            this.dgrdCotizacion.Size = new System.Drawing.Size(851, 375);
-            this.dgrdCotizacion.TabIndex = 6;
+            this.grdPrecios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.grdPrecios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdPrecios.Location = new System.Drawing.Point(12, 111);
+            this.grdPrecios.Name = "grdPrecios";
+            this.grdPrecios.Size = new System.Drawing.Size(851, 375);
+            this.grdPrecios.TabIndex = 35;
+            this.grdPrecios.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrdPrecios_CellValueChanged);
             // 
             // frmPinataPreciosCotizaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(875, 498);
-            this.Controls.Add(this.dgrdCotizacion);
+            this.Controls.Add(this.grdPrecios);
             this.Controls.Add(this.btn_guardarPrecios);
             this.Controls.Add(this.lblTitulo);
             this.Name = "frmPinataPreciosCotizaciones";
             this.Text = "Administración de precios";
             this.Load += new System.EventHandler(this.FrmPinataPreciosCotizaciones_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.fiestasMexicanasDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.v_PRECIO_PINATABindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgrdCotizacion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdPrecios)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -134,10 +92,6 @@
 
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button btn_guardarPrecios;
-        private FiestasMexicanasDataSet fiestasMexicanasDataSet;
-        private System.Windows.Forms.BindingSource v_PRECIO_PINATABindingSource;
-        private FiestasMexicanasDataSetTableAdapters.v_PRECIO_PINATATableAdapter v_PRECIO_PINATATableAdapter;
-        private FiestasMexicanasDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridView dgrdCotizacion;
+        private System.Windows.Forms.DataGridView grdPrecios;
     }
 }

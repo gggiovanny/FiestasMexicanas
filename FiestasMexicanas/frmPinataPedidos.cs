@@ -27,11 +27,11 @@ namespace FiestasMexicanas
             colEdited.HeaderText = "edited";
             colEdited.Name = "edited";
             grdCotizacion.Columns.Add(colEdited);
+            grdCotizacion.Columns["edited"].Visible = false;
 
             grdCotizacion.Columns["Codigo"].ReadOnly = true;
             grdCotizacion.Columns["Hay Molde"].ReadOnly = true;
             grdCotizacion.Columns["edited"].ReadOnly = true;
-            grdCotizacion.Columns["edited"].Visible = false;
 
             #endregion
         }
