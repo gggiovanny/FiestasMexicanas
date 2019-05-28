@@ -1,6 +1,6 @@
-﻿namespace LIbreriasGeneralesFAV99
+﻿namespace FiestasMexicanas
 {
-    partial class FrmLoginV2
+    partial class frmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLoginV2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.txt_usuario = new System.Windows.Forms.TextBox();
             this.lblUsuarioAlias = new System.Windows.Forms.Label();
             this.lblContraseña = new System.Windows.Forms.Label();
@@ -36,9 +36,7 @@
             this.btn_iniciarSesion = new System.Windows.Forms.Button();
             this.btn_salir = new System.Windows.Forms.PictureBox();
             this.lblMarbolERP = new System.Windows.Forms.Label();
-            this.icono_mayus = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icono_mayus)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_usuario
@@ -99,6 +97,7 @@
             this.btn_iniciarSesion.TabIndex = 2;
             this.btn_iniciarSesion.Text = "Iniciar sesión";
             this.btn_iniciarSesion.UseVisualStyleBackColor = false;
+            this.btn_iniciarSesion.Click += new System.EventHandler(this.Btn_iniciarSesion_Click);
             // 
             // btn_salir
             // 
@@ -123,20 +122,6 @@
             this.lblMarbolERP.TabIndex = 20;
             this.lblMarbolERP.Text = "LOGIN FIESTAS MEXICANAS";
             // 
-            // icono_mayus
-            // 
-            this.icono_mayus.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.icono_mayus.BackColor = System.Drawing.Color.White;
-            this.icono_mayus.Image = ((System.Drawing.Image)(resources.GetObject("icono_mayus.Image")));
-            this.icono_mayus.InitialImage = null;
-            this.icono_mayus.Location = new System.Drawing.Point(490, 132);
-            this.icono_mayus.Name = "icono_mayus";
-            this.icono_mayus.Size = new System.Drawing.Size(20, 20);
-            this.icono_mayus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.icono_mayus.TabIndex = 21;
-            this.icono_mayus.TabStop = false;
-            this.icono_mayus.Visible = false;
-            // 
             // FrmLoginV2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -144,7 +129,6 @@
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(528, 258);
             this.ControlBox = false;
-            this.Controls.Add(this.icono_mayus);
             this.Controls.Add(this.lblMarbolERP);
             this.Controls.Add(this.btn_salir);
             this.Controls.Add(this.btn_iniciarSesion);
@@ -160,7 +144,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Acceso General";
             ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icono_mayus)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,6 +157,5 @@
         private System.Windows.Forms.Button btn_iniciarSesion;
         private System.Windows.Forms.PictureBox btn_salir;
         private System.Windows.Forms.Label lblMarbolERP;
-        private System.Windows.Forms.PictureBox icono_mayus;
     }
 }
