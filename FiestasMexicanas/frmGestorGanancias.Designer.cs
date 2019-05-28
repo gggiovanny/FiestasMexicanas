@@ -45,34 +45,34 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.numOtrosIngresos = new System.Windows.Forms.NumericUpDown();
+            this.numArtFiesta = new System.Windows.Forms.NumericUpDown();
+            this.numCompraVenta = new System.Windows.Forms.NumericUpDown();
+            this.numDulces = new System.Windows.Forms.NumericUpDown();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.numOtrosGastos = new System.Windows.Forms.NumericUpDown();
+            this.numGasolina = new System.Windows.Forms.NumericUpDown();
+            this.numServicios = new System.Windows.Forms.NumericUpDown();
+            this.numSueldos = new System.Windows.Forms.NumericUpDown();
+            this.numMateriales = new System.Windows.Forms.NumericUpDown();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.radioBtn_mes = new System.Windows.Forms.RadioButton();
             this.radioBtn_semana = new System.Windows.Forms.RadioButton();
             this.grdIngresosPinata = new System.Windows.Forms.DataGridView();
-            this.numDulces = new System.Windows.Forms.NumericUpDown();
-            this.numCompraVenta = new System.Windows.Forms.NumericUpDown();
-            this.numArtFiesta = new System.Windows.Forms.NumericUpDown();
-            this.numOtrosIngresos = new System.Windows.Forms.NumericUpDown();
-            this.numMateriales = new System.Windows.Forms.NumericUpDown();
-            this.numSueldos = new System.Windows.Forms.NumericUpDown();
-            this.numServicios = new System.Windows.Forms.NumericUpDown();
-            this.numGasolina = new System.Windows.Forms.NumericUpDown();
-            this.numOtrosGastos = new System.Windows.Forms.NumericUpDown();
             this.numGananciaTotal = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numOtrosIngresos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numArtFiesta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numCompraVenta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDulces)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numOtrosGastos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numGasolina)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numServicios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSueldos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMateriales)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdIngresosPinata)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numDulces)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numCompraVenta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numArtFiesta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numOtrosIngresos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numMateriales)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSueldos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numServicios)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numGasolina)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numOtrosGastos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numGananciaTotal)).BeginInit();
             this.SuspendLayout();
             // 
@@ -262,6 +262,62 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingresos adicionales";
             // 
+            // numOtrosIngresos
+            // 
+            this.numOtrosIngresos.DecimalPlaces = 2;
+            this.numOtrosIngresos.Location = new System.Drawing.Point(139, 110);
+            this.numOtrosIngresos.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            0});
+            this.numOtrosIngresos.Name = "numOtrosIngresos";
+            this.numOtrosIngresos.Size = new System.Drawing.Size(100, 20);
+            this.numOtrosIngresos.TabIndex = 64;
+            this.numOtrosIngresos.ValueChanged += new System.EventHandler(this.Num_Editado);
+            // 
+            // numArtFiesta
+            // 
+            this.numArtFiesta.DecimalPlaces = 2;
+            this.numArtFiesta.Location = new System.Drawing.Point(139, 84);
+            this.numArtFiesta.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            0});
+            this.numArtFiesta.Name = "numArtFiesta";
+            this.numArtFiesta.Size = new System.Drawing.Size(100, 20);
+            this.numArtFiesta.TabIndex = 63;
+            this.numArtFiesta.ValueChanged += new System.EventHandler(this.Num_Editado);
+            // 
+            // numCompraVenta
+            // 
+            this.numCompraVenta.DecimalPlaces = 2;
+            this.numCompraVenta.Location = new System.Drawing.Point(139, 58);
+            this.numCompraVenta.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            0});
+            this.numCompraVenta.Name = "numCompraVenta";
+            this.numCompraVenta.Size = new System.Drawing.Size(100, 20);
+            this.numCompraVenta.TabIndex = 62;
+            this.numCompraVenta.ValueChanged += new System.EventHandler(this.Num_Editado);
+            // 
+            // numDulces
+            // 
+            this.numDulces.DecimalPlaces = 2;
+            this.numDulces.Location = new System.Drawing.Point(139, 31);
+            this.numDulces.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            0});
+            this.numDulces.Name = "numDulces";
+            this.numDulces.Size = new System.Drawing.Size(100, 20);
+            this.numDulces.TabIndex = 61;
+            this.numDulces.ValueChanged += new System.EventHandler(this.Num_Editado);
+            // 
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -281,6 +337,76 @@
             this.groupBox2.TabIndex = 57;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Gastos";
+            // 
+            // numOtrosGastos
+            // 
+            this.numOtrosGastos.DecimalPlaces = 2;
+            this.numOtrosGastos.Location = new System.Drawing.Point(139, 119);
+            this.numOtrosGastos.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            0});
+            this.numOtrosGastos.Name = "numOtrosGastos";
+            this.numOtrosGastos.Size = new System.Drawing.Size(100, 20);
+            this.numOtrosGastos.TabIndex = 69;
+            this.numOtrosGastos.ValueChanged += new System.EventHandler(this.Num_Editado);
+            // 
+            // numGasolina
+            // 
+            this.numGasolina.DecimalPlaces = 2;
+            this.numGasolina.Location = new System.Drawing.Point(139, 93);
+            this.numGasolina.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            0});
+            this.numGasolina.Name = "numGasolina";
+            this.numGasolina.Size = new System.Drawing.Size(100, 20);
+            this.numGasolina.TabIndex = 68;
+            this.numGasolina.ValueChanged += new System.EventHandler(this.Num_Editado);
+            // 
+            // numServicios
+            // 
+            this.numServicios.DecimalPlaces = 2;
+            this.numServicios.Location = new System.Drawing.Point(139, 67);
+            this.numServicios.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            0});
+            this.numServicios.Name = "numServicios";
+            this.numServicios.Size = new System.Drawing.Size(100, 20);
+            this.numServicios.TabIndex = 67;
+            this.numServicios.ValueChanged += new System.EventHandler(this.Num_Editado);
+            // 
+            // numSueldos
+            // 
+            this.numSueldos.DecimalPlaces = 2;
+            this.numSueldos.Location = new System.Drawing.Point(139, 41);
+            this.numSueldos.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            0});
+            this.numSueldos.Name = "numSueldos";
+            this.numSueldos.Size = new System.Drawing.Size(100, 20);
+            this.numSueldos.TabIndex = 66;
+            this.numSueldos.ValueChanged += new System.EventHandler(this.Num_Editado);
+            // 
+            // numMateriales
+            // 
+            this.numMateriales.DecimalPlaces = 2;
+            this.numMateriales.Location = new System.Drawing.Point(139, 15);
+            this.numMateriales.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            0});
+            this.numMateriales.Name = "numMateriales";
+            this.numMateriales.Size = new System.Drawing.Size(100, 20);
+            this.numMateriales.TabIndex = 65;
+            this.numMateriales.ValueChanged += new System.EventHandler(this.Num_Editado);
             // 
             // groupBox3
             // 
@@ -335,132 +461,6 @@
             this.grdIngresosPinata.Size = new System.Drawing.Size(576, 426);
             this.grdIngresosPinata.TabIndex = 60;
             // 
-            // numDulces
-            // 
-            this.numDulces.DecimalPlaces = 2;
-            this.numDulces.Location = new System.Drawing.Point(139, 31);
-            this.numDulces.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.numDulces.Name = "numDulces";
-            this.numDulces.Size = new System.Drawing.Size(100, 20);
-            this.numDulces.TabIndex = 61;
-            this.numDulces.ValueChanged += new System.EventHandler(this.Num_Editado);
-            // 
-            // numCompraVenta
-            // 
-            this.numCompraVenta.DecimalPlaces = 2;
-            this.numCompraVenta.Location = new System.Drawing.Point(139, 58);
-            this.numCompraVenta.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.numCompraVenta.Name = "numCompraVenta";
-            this.numCompraVenta.Size = new System.Drawing.Size(100, 20);
-            this.numCompraVenta.TabIndex = 62;
-            this.numCompraVenta.ValueChanged += new System.EventHandler(this.Num_Editado);
-            // 
-            // numArtFiesta
-            // 
-            this.numArtFiesta.DecimalPlaces = 2;
-            this.numArtFiesta.Location = new System.Drawing.Point(139, 84);
-            this.numArtFiesta.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.numArtFiesta.Name = "numArtFiesta";
-            this.numArtFiesta.Size = new System.Drawing.Size(100, 20);
-            this.numArtFiesta.TabIndex = 63;
-            this.numArtFiesta.ValueChanged += new System.EventHandler(this.Num_Editado);
-            // 
-            // numOtrosIngresos
-            // 
-            this.numOtrosIngresos.DecimalPlaces = 2;
-            this.numOtrosIngresos.Location = new System.Drawing.Point(139, 110);
-            this.numOtrosIngresos.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.numOtrosIngresos.Name = "numOtrosIngresos";
-            this.numOtrosIngresos.Size = new System.Drawing.Size(100, 20);
-            this.numOtrosIngresos.TabIndex = 64;
-            this.numOtrosIngresos.ValueChanged += new System.EventHandler(this.Num_Editado);
-            // 
-            // numMateriales
-            // 
-            this.numMateriales.DecimalPlaces = 2;
-            this.numMateriales.Location = new System.Drawing.Point(139, 15);
-            this.numMateriales.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.numMateriales.Name = "numMateriales";
-            this.numMateriales.Size = new System.Drawing.Size(100, 20);
-            this.numMateriales.TabIndex = 65;
-            this.numMateriales.ValueChanged += new System.EventHandler(this.Num_Editado);
-            // 
-            // numSueldos
-            // 
-            this.numSueldos.DecimalPlaces = 2;
-            this.numSueldos.Location = new System.Drawing.Point(139, 41);
-            this.numSueldos.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.numSueldos.Name = "numSueldos";
-            this.numSueldos.Size = new System.Drawing.Size(100, 20);
-            this.numSueldos.TabIndex = 66;
-            this.numSueldos.ValueChanged += new System.EventHandler(this.Num_Editado);
-            // 
-            // numServicios
-            // 
-            this.numServicios.DecimalPlaces = 2;
-            this.numServicios.Location = new System.Drawing.Point(139, 67);
-            this.numServicios.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.numServicios.Name = "numServicios";
-            this.numServicios.Size = new System.Drawing.Size(100, 20);
-            this.numServicios.TabIndex = 67;
-            this.numServicios.ValueChanged += new System.EventHandler(this.Num_Editado);
-            // 
-            // numGasolina
-            // 
-            this.numGasolina.DecimalPlaces = 2;
-            this.numGasolina.Location = new System.Drawing.Point(139, 93);
-            this.numGasolina.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.numGasolina.Name = "numGasolina";
-            this.numGasolina.Size = new System.Drawing.Size(100, 20);
-            this.numGasolina.TabIndex = 68;
-            this.numGasolina.ValueChanged += new System.EventHandler(this.Num_Editado);
-            // 
-            // numOtrosGastos
-            // 
-            this.numOtrosGastos.DecimalPlaces = 2;
-            this.numOtrosGastos.Location = new System.Drawing.Point(139, 119);
-            this.numOtrosGastos.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.numOtrosGastos.Name = "numOtrosGastos";
-            this.numOtrosGastos.Size = new System.Drawing.Size(100, 20);
-            this.numOtrosGastos.TabIndex = 69;
-            this.numOtrosGastos.ValueChanged += new System.EventHandler(this.Num_Editado);
-            // 
             // numGananciaTotal
             // 
             this.numGananciaTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -468,8 +468,8 @@
             this.numGananciaTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numGananciaTotal.Location = new System.Drawing.Point(757, 529);
             this.numGananciaTotal.Maximum = new decimal(new int[] {
-            1000000,
-            0,
+            1410065407,
+            2,
             0,
             0});
             this.numGananciaTotal.Name = "numGananciaTotal";
@@ -499,20 +499,20 @@
             this.Load += new System.EventHandler(this.FrmGestorGanancias_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numOtrosIngresos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numArtFiesta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numCompraVenta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDulces)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numOtrosGastos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numGasolina)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numServicios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSueldos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMateriales)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdIngresosPinata)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numDulces)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numCompraVenta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numArtFiesta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numOtrosIngresos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numMateriales)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSueldos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numServicios)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numGasolina)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numOtrosGastos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numGananciaTotal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

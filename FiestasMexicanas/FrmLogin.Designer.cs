@@ -49,6 +49,7 @@
             this.txt_usuario.Name = "txt_usuario";
             this.txt_usuario.Size = new System.Drawing.Size(391, 26);
             this.txt_usuario.TabIndex = 0;
+            this.txt_usuario.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.Txt_contraseña_PreviewKeyDown);
             // 
             // lblUsuarioAlias
             // 
@@ -82,6 +83,7 @@
             this.txt_contraseña.Size = new System.Drawing.Size(391, 26);
             this.txt_contraseña.TabIndex = 1;
             this.txt_contraseña.UseSystemPasswordChar = true;
+            this.txt_contraseña.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.Txt_contraseña_PreviewKeyDown);
             // 
             // btn_iniciarSesion
             // 
@@ -110,6 +112,7 @@
             this.btn_salir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_salir.TabIndex = 19;
             this.btn_salir.TabStop = false;
+            this.btn_salir.Click += new System.EventHandler(this.Btn_salir_Click);
             // 
             // lblMarbolERP
             // 
@@ -122,7 +125,7 @@
             this.lblMarbolERP.TabIndex = 20;
             this.lblMarbolERP.Text = "LOGIN FIESTAS MEXICANAS";
             // 
-            // FrmLoginV2
+            // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -140,7 +143,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmLoginV2";
+            this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Acceso General";
             ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).EndInit();

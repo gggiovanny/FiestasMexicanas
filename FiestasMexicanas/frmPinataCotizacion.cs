@@ -143,7 +143,7 @@ namespace FiestasMexicanas
         private int Guardar()
         {
             int result = -1;
-            
+
             string sConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["FiestasMexicanas.Properties.Settings.FiestasMexicanasConnectionStringBueno"].ConnectionString;
             using (SqlConnection conexion = new SqlConnection(sConnectionString))
             {

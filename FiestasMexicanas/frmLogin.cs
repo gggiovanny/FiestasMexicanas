@@ -58,5 +58,21 @@ namespace FiestasMexicanas
             frmMenu.Closed += (s, args) => this.Close();
             frmMenu.Show();
         }
+
+        private void Txt_contraseña_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (VerificarUsuario())
+                    AbrirMenu();
+                else
+                    MessageBox.Show("Usuario o contraseña incorrectos!", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void Btn_salir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
