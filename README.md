@@ -1,5 +1,6 @@
 # Fiestas Mexicanas
  Sistema de cotización, administración de pedidos y producción de piñatas.
+ + [Scripts utilizados en la base de datos](https://github.com/gggiovanny/FiestasMexicanas-Scripts/ "Scripts utilizados en la base de datos").
 
 ### Capturas
 ![frmPinataCotizacion](https://github.com/gggiovanny/FiestasMexicanas/blob/master/FiestasMexicanas/img/capturas/frmPinataCotizacion.png?raw=true)
@@ -13,4 +14,3 @@
 ![frmClientes](https://github.com/gggiovanny/FiestasMexicanas/blob/master/FiestasMexicanas/img/capturas/frmClientes.png?raw=true)
 ![frmProveedores](https://github.com/gggiovanny/FiestasMexicanas/blob/master/FiestasMexicanas/img/capturas/frmProveedores.png?raw=true)
 ![frmMenuPrincipal](https://github.com/gggiovanny/FiestasMexicanas/blob/master/FiestasMexicanas/img/capturas/frmMenuPrincipal.png?raw=true)
- 
